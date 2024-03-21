@@ -70,4 +70,6 @@ taskList.addEventListener('click', function(event) {
 
 > W tym przykładzie, zamiast dodawać obsługę zdarzenia kliknięcia do każdego elementu listy, przypisujemy ją do kontenera taskList. Gdy użytkownik kliknie na element listy, zdarzenie zostanie przechwycone przez kontener, a następnie używając event.target sprawdzamy, który dokładnie element został kliknięty. Następnie możemy odpowiednio zareagować, dodając lub usuwając klasę completed, aby oznaczyć zadanie jako wykonane. Dzięki temu kod jest bardziej wydajny i łatwiejszy w utrzymaniu, zwłaszcza w przypadku dynamicznie generowanych elementów.
 
-## ➡️ Explain how this works in JavaScript.
+## ➡️ Explain how `this` works in JavaScript.
+
+### Wyjaśnij jak działa `this` w JavaScript 
