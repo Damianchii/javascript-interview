@@ -73,3 +73,7 @@ taskList.addEventListener('click', function(event) {
 ## ➡️ Explain how `this` works in JavaScript.
 
 ### Wyjaśnij jak działa `this` w JavaScript 
+
+## ➡️ Explain how prototypal inheritance works.
+
+### Wyjaśnij, jak działa dziedziczenie prototypowe.
