@@ -72,7 +72,50 @@ taskList.addEventListener('click', function(event) {
 
 ## ➡️ Explain how `this` works in JavaScript.
 
+
+> In JavaScript, the value of this depends on the context of the function invocation:
+> <b>Global Context</b>
+
+> * In the global context, outside of any function, this refers to the global object, which is window in web browsers and global in Node.js.
+> <b>Function Context</b>
+
+> * Inside a function, the value of this depends on how the function is called. If the function is called as a standalone function (i.e., not as a method of an object), this refers to the global object window in non-strict mode. In strict mode, this is undefined. If the function is called as a method of an object, this refers to that object.
+> <b>Arrow Functions</b>
+
+> * Arrow functions do not have their own this context. Instead, they inherit this from the enclosing lexical scope (i.e., the scope where they are defined).
+> <b>Event Handlers</b>
+
+> * In event handler functions, such as those assigned to DOM elements, this refers to the element that triggered the event.
+> <b>Function Constructors</b>
+
+> * Inside a function constructor (a function invoked with the new keyword), this refers to the newly created object.
+
 ### Wyjaśnij jak działa `this` w JavaScript 
+
+> W JavaScript wartość `this` zależy od kontekstu wywołania funkcji:
+> <b>Kontekst Globalny</b>
+
+> * W kontekście globalnym, poza jakąkolwiek funkcją, `this` odnosi się do obiektu globalnego, którym jest `window` w przeglądarkach internetowych oraz `global` w Node.js.
+
+> <b>Kontekst Funkcji</b>
+
+> * Wewnątrz funkcji, wartość `this` zależy od sposobu wywołania funkcji.
+Jeśli funkcja jest wywoływana jako samodzielna funkcja (czyli nie jako metoda obiektu), this odnosi się do obiektu globalnego `window` w trybie nieścisłym (non-strict mode). W trybie ścisłym (strict mode), `this` jest `undefined`.
+Jeśli funkcja jest wywoływana jako metoda obiektu, `this` odnosi się do tego obiektu.
+
+> <b>Funkcje Strzałkowe</b>
+
+> * Funkcje strzałkowe nie mają własnego kontekstu `this`. Zamiast tego dziedziczą `this` z otaczającego zakresu leksykalnego (czyli z zakresu, w którym są zdefiniowane).
+
+> <b>Obsługa Zdarzeń</b>
+
+> * W funkcjach obsługi zdarzeń, takich jak te przypisane do elementów DOM, `this` odnosi się do elementu, który wywołał zdarzenie.
+
+> <b>Konstruktory Funkcji</b>
+
+> * Wewnątrz funkcji konstruktora (funkcji wywoływanej z użyciem słowa kluczowego `new`), `this` odnosi się do nowo utworzonego obiektu.
+
+
 
 ## ➡️ Explain how prototypal inheritance works.
 
