@@ -115,6 +115,51 @@ Jeśli funkcja jest wywoływana jako metoda obiektu, `this` odnosi się do tego 
 
 > * Wewnątrz funkcji konstruktora (funkcji wywoływanej z użyciem słowa kluczowego `new`), `this` odnosi się do nowo utworzonego obiektu.
 
+``` bash
+// Kontekst globalny
+console.log(this); // loguje obiekt globalny (window w przeglądarkach, global w Node.js)
+
+// Kontekst funkcji
+function foo() {
+  console.log(this);
+}
+foo(); // loguje obiekt globalny (window w przeglądarkach, global w Node.js)
+
+// Kontekst metody
+const obj = {
+  name: 'John',
+  greet: function() {
+    console.log(this.name);
+  }
+};
+obj.greet(); // loguje 'John', ponieważ 'this' odnosi się do 'obj'
+
+// Funkcje strzałkowe
+const bar = () => {
+  console.log(this);
+};
+bar(); // loguje ten sam obiekt 'this' co poza funkcją strzałkową
+
+// Obsługa zdarzeń
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+  console.log(this); // loguje element przycisku, który wywołał zdarzenie
+});
+
+// Konstruktory
+function Osoba(imie) {
+  this.imie = imie;
+}
+const jan = new Osoba('Jan');
+console.log(jan.imie); // loguje 'Jan', ponieważ 'this' odnosi się do nowo utworzonego obiektu 'jan'
+
+// Jawne wiązanie
+function powitanie() {
+  console.log(this.imie);
+}
+const obj2 = { imie: 'Alicja' };
+powitanie.call(obj2); // loguje 'Alicja', ponieważ 'this' jest wyraźnie ustawione na 'obj2' za pomocą 'call'
+```
 
 
 ## ➡️ Explain how prototypal inheritance works.
