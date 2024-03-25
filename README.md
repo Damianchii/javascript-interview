@@ -200,15 +200,11 @@ john.greet(); // Wyświetli: "Hello, my name is John and I am 30 years old."
 
 ## ➡️ What is the difference between a variable that is: `null`, `undefined` or `undeclared`?
 
-> * <b>`null`</b>
-
 > * `null` is a JavaScript primitive value that represents the intentional absence of any object value. It is explicitly assigned by developers to indicate that a variable has no value or that an object reference is intentionally empty.
 
 ```bash
 let myNull = null;
 ```
-
-> * <b>`undefined`</b>
 
 > * `undefined` is a JavaScript primitive value automatically assigned to variables that have been declared but not initialized or assigned any value. It also represents the value returned by functions that do not explicitly return anything.
 
@@ -218,8 +214,6 @@ let myNull = null;
 let myVar;
 console.log(myVar); // Output: undefined
 ```
-
-> * <b>Niezadeklarowana</b>
 
 > * An undeclared variable is a variable that has been used without being declared with the `var`, `let`, or `const` keyword. Accessing an undeclared variable will result in a reference error in strict mode or create a global variable implicitly in non-strict mode.
 
