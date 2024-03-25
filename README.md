@@ -164,4 +164,36 @@ powitanie.call(obj2); // loguje 'Alicja', ponieważ 'this' jest wyraźnie ustawi
 
 ## ➡️ Explain how prototypal inheritance works.
 
+> By leveraging prototypal inheritance, JavaScript enables code reuse and object composition, facilitating the creation of more modular and maintainable codebases. Developers can extend and customize objects by adding properties and methods to their prototypes, allowing for flexible and powerful object-oriented programming in JavaScript.
+
 ### Wyjaśnij, jak działa dziedziczenie prototypowe.
+
+
+> Dzięki dziedziczeniu prototypowemu JavaScript umożliwia ponowne wykorzystanie kodu i kompozycję obiektów, co ułatwia tworzenie bardziej modułowych i łatwych w utrzymaniu kodów źródłowych. Programiści mogą rozszerzać i dostosowywać obiekty, dodając właściwości i metody do ich prototypów, co pozwala na elastyczne i potężne programowanie zorientowane obiektowo w JavaScript.
+``` bash
+// Definiowanie konstruktora dla klasy Person
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Dodanie metody do prototypu klasy Person
+Person.prototype.greet = function() {
+  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+};
+
+// Utworzenie nowego obiektu za pomocą konstruktora Person
+const john = new Person('John', 30);
+
+// Wywołanie metody z prototypu obiektu
+john.greet(); // Wyświetli: "Hello, my name is John and I am 30 years old."
+```
+> W tym przykładzie
+
+> * `Person` jest konstruktorem dla klasy `Person`, który przyjmuje dwa argumenty: `name` i `age`.
+
+> * Metoda `greet()` jest dodawana do prototypu klasy `Person`, co oznacza, że wszystkie obiekty utworzone za pomocą konstruktora Person będą miały dostęp do tej metody.
+
+> * Obiekt `john` jest utworzony za pomocą konstruktora Person.
+
+> * Wywołanie metody `greet()` na obiekcie `john` wyświetli przywitanie zawierające jego imię i wiek.
