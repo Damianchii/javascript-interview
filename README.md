@@ -325,3 +325,49 @@ for (let key in obj) {
 }
 
 ```
+## ➡️ Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
+
+> `Array.forEach()`
+
+> The `forEach()` method executes a provided function once for each array element. It does not return a new array.
+
+```bash
+const arr = [1, 2, 3];
+arr.forEach((value, index) => {
+  console.log(`Element at index ${index}: ${value}`);
+});
+```
+
+> `Array.map()`
+
+> The `map()` method creates a new array by calling a provided function on every element in the calling array. It returns a new array with the results of the function calls.
+
+``` bash
+const arr = [1, 2, 3];
+const doubledArr = arr.map(value => value * 2);
+console.log(doubledArr); // Output: [2, 4, 6]
+```
+>In summary, you would pick `forEach()` when you need to perform an operation on each element of the array without creating a new array, and you would pick `map()` when you need to transform each element of the array and generate a new array with the transformed values.
+
+### Czy możesz opisać główną różnicę między pętlą `Array.forEach()` a metodami `Array.map()` i dlaczego miałbyś wybrać jedną, a nie drugą?
+
+> `Array.forEach()`
+> Metoda `forEach()` wykonuje podaną funkcję raz dla każdego elementu tablicy. Nie zwraca nowej tablicy.
+
+``` bash
+const arr = [1, 2, 3];
+arr.forEach((wartość, indeks) => {
+  console.log(`Element na indeksie ${indeks}: ${wartość}`);
+});
+```
+
+> `Array.map()`
+> Metoda `map()` tworzy nową tablicę, wywołując podaną funkcję dla każdego elementu w wywołującej tablicy. Zwraca nową tablicę z wynikami wywołań funkcji
+
+```bash
+const arr = [1, 2, 3];
+const podwojonaTablica = arr.map(wartość => wartość * 2);
+console.log(podwojonaTablica); // Wynik: [2, 4, 6]
+
+```
+> Podsumowując, wybierasz `forEach()` gdy potrzebujesz wykonać operację na każdym elemencie tablicy bez tworzenia nowej tablicy, a `map()` gdy potrzebujesz przekształcić każdy element tablicy i utworzyć nową tablicę z przekształconymi wartościami.
