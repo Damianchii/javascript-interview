@@ -254,6 +254,8 @@ console.log(niezadeklarowanaZmienna); // ReferenceError: niezadeklarowanaZmienna
 
 > Closure occurs when a function remembers and then uses its lexical scope, even when it is called outside of it.
 
+>  A function defined inside of another function, the inner function has access to the variables and scope of the outer function. Allow for private variables and state maintenance Used frequently in JS frameworks: React, Vue, Angular
+
 
 ### Czym są domknięcia i jak sie ich uzywa ?
 
@@ -273,4 +275,53 @@ function outer(){
 const closure = outer()
 
 console.log(closure // Damian
+```
+## ➡️ What language constructions do you use for iterating over object properties and array items?
+
+> for loop, for..in, for each..in, map, reduce etc.
+
+> <b>For Each</b>
+
+``` bash
+const arr = [1, 2, 3];
+
+arr.forEach(value => {
+  console.log(value);
+});
+
+```
+
+> <b>For in</b>
+
+```bash
+const obj = { a: 1, b: 2, c: 3 };
+
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+
+```
+
+### Jakich konstrukcji językowych używasz do iteracji po właściwościach obiektów i elementach tablicy?
+
+> <b>For Each</b>
+
+``` bash
+const arr = [1, 2, 3];
+
+arr.forEach(value => {
+  console.log(value);
+});
+
+```
+
+> <b>For in</b>
+
+```bash
+const obj = { a: 1, b: 2, c: 3 };
+
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+
 ```
