@@ -239,7 +239,6 @@ let mojaZmienna = null;
 ```bash
 let mojaZmienna;
 console.log(mojaZmienna); // Wynik: undefined
-
 ```
 
 > * Zmienna niezadeklarowana to zmienna, która została użyta bez zadeklarowania za pomocą słowa kluczowego `var`, `let` lub `const`. Uzyskanie dostępu do zmiennej niezadeklarowanej spowoduje błąd odwołania w trybie ścisłym lub utworzy zmienną globalną domyślnie w trybie nieścisłym.
@@ -249,6 +248,29 @@ console.log(niezadeklarowanaZmienna); // ReferenceError: niezadeklarowanaZmienna
 ```
 
 > Podsumowując, `null` to wartość wskazująca na celowy brak lub pustość, `undefined` to wartość przypisana zmiennym, które nie zostały zainicjalizowane, a niezadeklarowane zmienne to takie, które zostały użyte bez wcześniejszego zadeklarowania.
-/asdasdasd
 
-mjhvjhgj
+
+## ➡️ What is a closure, and how/why would you use one?
+
+> Closure occurs when a function remembers and then uses its lexical scope, even when it is called outside of it.
+
+
+### Czym są domknięcia i jak sie ich uzywa ?
+
+> Domknięcie występuje wtedy, gdy funkcja zapamiętuje i następnie wykorzystuje swój leksykalny zakres, nawet wtedy gdy jest wywoływana poza nim.
+
+``` bash
+function outer(){
+  const name = "Damian" 
+
+  function inner(){
+    return name
+  }
+
+  return inner()
+}
+
+const closure = outer()
+
+console.log(closure // Damian
+```
