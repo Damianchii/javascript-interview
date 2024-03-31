@@ -371,3 +371,43 @@ console.log(podwojonaTablica); // Wynik: [2, 4, 6]
 
 ```
 > Podsumowując, wybierasz `forEach()` gdy potrzebujesz wykonać operację na każdym elemencie tablicy bez tworzenia nowej tablicy, a `map()` gdy potrzebujesz przekształcić każdy element tablicy i utworzyć nową tablicę z przekształconymi wartościami.
+
+## ➡️ What is a typical use case for anonymous functions?
+
+> An anonymous function in JavaScript is a function that does not have a name.
+
+``` bash
+const myFunction = function() {
+   console.log('This is an anonymous function');
+};
+
+```
+> <b>Event Handling</b> Anonymous functions can be used as event handlers in the user interface. They are assigned to events such as clicks, text box value changes, page scrolling, etc.
+
+``` bash
+document.getElementById('myButton').addEventListener('click', function() {
+   console.log('Button clicked');
+});
+
+```
+> <b>Closures</b> Anonymous functions can create closures, which means they can access variables in their surrounding scope even after they leave that scope
+
+### Jaki jest typowy przypadek użycia funkcji anonimowych?
+
+> Funkcja anonimowa w JavaScript to funkcja, która nie ma nazwy.
+
+``` bash
+const myFunction = function() {
+  console.log('This is an anonymous function');
+};
+
+```
+> <b>Obsługa zdarzeń</b> Funkcje anonimowe mogą być używane jako obsługa zdarzeń w interfejsie użytkownika. Są one przypisywane do zdarzeń takich jak kliknięcia, zmiany wartości pola tekstowego, przewijanie strony itp.
+
+``` bash
+document.getElementById('myButton').addEventListener('click', function() {
+  console.log('Button clicked');
+});
+
+```
+> <b>Domknięcia (closures)</b> Funkcje anonimowe mogą tworzyć zamknięcia, co oznacza, że ​​mogą uzyskiwać dostęp do zmiennych ze swojego otaczającego zakresu, nawet po opuszczeniu tego zakresu
