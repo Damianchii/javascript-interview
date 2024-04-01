@@ -568,3 +568,7 @@ const args = ['Alice', 'Hello'];
 greet.apply(person, args); // Output: Hello, Alice! My name is John.
 
 ```
+
+## ➡️ Explain Function.prototype.bind()
+
+### Wyjasnij Function.prototype.bind()
