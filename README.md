@@ -570,5 +570,45 @@ greet.apply(person, args); // Output: Hello, Alice! My name is John.
 ```
 
 ## ➡️ Explain Function.prototype.bind()
+> `Function.prototype.bind()` is a built-in method in JavaScript that creates a new function that is assigned a specific context and optional constant arguments.
+
+> The `bind()` method allows you to establish a constant context (`this` value) for the function. This allows the specified context to be preserved even when the function is called in a different context.
+
+```bash
+const person = {
+   name: 'John',
+   greet: function() {
+     console.log(`Hello, ${this.name}!`);
+   }
+};
+
+const boundGreet = person.greet.bind(person);
+boundGreet(); // Output: Hello, John!
+
+```
+
+> In this example, `bind()` is used to create a new boundGreet function that will always be called in the context of the person object, even when called in a different context. Thanks to this, the boundGreet function will retain access to the name property of the person object.
 
 ### Wyjasnij Function.prototype.bind()
+
+> `Function.prototype.bind()` jest metodą wbudowaną w języku JavaScript, która tworzy nową funkcję, która ma przypisany określony kontekst oraz opcjonalnie stałe argumenty.
+
+> Metoda `bind()` umożliwia ustalenie stałego kontekstu (wartości `this`) dla funkcji. Pozwala to na zachowanie określonego kontekstu nawet wtedy, gdy funkcja zostanie wywołana w innym kontekście.
+
+```bash
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log(`Hello, ${this.name}!`);
+  }
+};
+
+const boundGreet = person.greet.bind(person);
+boundGreet(); // Output: Hello, John!
+
+```
+
+> W tym przykładzie `bind()` jest używane do utworzenia nowej funkcji boundGreet, która zawsze będzie wywoływana w kontekście obiektu person, nawet gdy zostanie wywołana w innym kontekście. Dzięki temu, funkcja boundGreet zachowa dostęp do właściwości name obiektu person.
+
+
+
