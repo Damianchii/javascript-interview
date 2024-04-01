@@ -476,3 +476,48 @@ console.log(person2.age);  // 25
 > `var person = Person()` - wywołanie funkcji konstruktora Person i przypisanie go do zmienniej `person`
 
 >`var person = new Person()` - tworzy instancje obiektu Person i przypisuje go do zmiennej person
+
+## ➡️ Explain the differences on the usage of foo between function foo() {} and var foo = function() {}
+
+> `function foo() {}` - Function declarations are raised on your device as they are used, which means we will be able to use them before their actual function, see:
+```bash
+foo(); // work!
+
+function foo() {
+  console.log('function');
+}
+
+```
+
+> `var foo = function() {}` - Function expressions are not constructed like function declarations. The variable `foo` is raised, but its value (function) is not assigned until the line of code is executed.
+
+```bash
+foo(); // error TypeError: foo is not a function
+
+var foo = function() {
+  console.log('function');
+};
+
+```
+
+### Wyjaśnij różnice w użyciu `foo` pomiędzy `function foo() {}` i `var foo = function() {}`
+
+> `function foo() {}` Deklaracje funkcji są wznoszone (hoisted) na górę swojego zasięgu podczas fazy kompilacji, co oznacza ze bedziemy mogii ich uzywac przed ich faktyczna deklaracji , orzeykład:
+```bash
+foo(); // To działa
+
+function foo() {
+  console.log('Deklaracja funkcji');
+}
+
+```
+> `var foo = function() {}` - Wyrażenia funkcji nie są wznoszone tak jak deklaracje funkcji. Zmienna `foo` jest wznoszona, ale jej wartość (funkcja) nie jest przypisywana do momentu wykonania linii kodu.
+
+```bash
+foo(); // To spowoduje błąd: TypeError: foo is not a function
+
+var foo = function() {
+  console.log('Wyrażenie funkcji');
+};
+
+```
