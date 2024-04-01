@@ -423,3 +423,56 @@ document.getElementById('myButton').addEventListener('click', function() {
 > <b>Obiekty natywne</b> to obiekty będące częścią języka JavaScript zdefiniowanego w specyfikacji ECMAScript, takie jak `String`, `Math`, `RegExp`, `Object`, `Function` itp.
 
 > <b>Obiekty hosta</b> są dostarczane przez środowisko wykonawcze (przeglądarkę lub węzeł), takie jak `window`, `XMLHTTPRequest`, `document`, `setTimeout` itp.
+
+## ➡️ Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+
+> `function Person(){}` - definition of the constructor of a function called Person
+```bash
+//Constructor function definition
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Use the constructor function to remnant the object
+var person1 = new person('John', 30);
+var person2 = new person('Alice', 25);
+
+// Display runtime properties
+console.log(person1.name); // Jan
+console.log(person1.age); // thirty
+
+console.log(person2.name); // Alice
+console.log(person2.age); // 25
+```
+
+> `var person = Person()` - calling the Person constructor function and assigning it to the `person` connector
+
+> `var person = new Person()` - creates an instance of the Person object and assigns it to the person variable
+
+### wyjaśnij róznice miedzy `function Person(){}`, `var person = Person()`, i `var person = new Person()`?
+
+> `function Person(){}` - definicja funkcji konstruktora o nazwie Person
+
+```bash
+// Definicja funkcji konstruktora
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Użycie funkcji konstruktora do utworzenia instancji obiektu
+var person1 = new Person('John', 30);
+var person2 = new Person('Alice', 25);
+
+// Wyświetlenie właściwości utworzonych obiektów
+console.log(person1.name); // John
+console.log(person1.age);  // 30
+
+console.log(person2.name); // Alice
+console.log(person2.age);  // 25
+```
+
+> `var person = Person()` - wywołanie funkcji konstruktora Person i przypisanie go do zmienniej `person`
+
+>`var person = new Person()` - tworzy instancje obiektu Person i przypisuje go do zmiennej person
