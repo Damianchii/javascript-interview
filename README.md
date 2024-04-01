@@ -521,3 +521,50 @@ var foo = function() {
 };
 
 ```
+
+## ➡️ Can you explain what `Function.call()` and `Function.apply()` do? What is the notable difference between the two?
+
+
+
+### Czy możesz wyjaśnić, do czego służą `Function.call()` i `Function.apply()`? Jaka jest zauważalna różnica między nimi?
+
+> `Function.call()` - Metoda `call()` wywołuje funkcję z określonym kontekstem (`this`) oraz argumentami przekazanymi jako oddzielone argumenty do metody `call()`.
+
+```bash
+function greet() {
+  console.log(`Hello, ${this.name}!`);
+}
+
+const person1 = { name: 'John' };
+const person2 = { name: 'Alice' };
+
+greet.call(person1); // Output: Hello, John!
+greet.call(person2); // Output: Hello, Alice!
+
+```
+```bash
+function greet(name) {
+  console.log(`Hello, ${name}! My name is ${this.name}.`);
+}
+
+const person = {
+  name: 'John'
+};
+
+greet.call(person, 'Alice'); // Output: Hello, Alice! My name is John.
+
+```
+
+> `Function.apply()` - Metoda `apply()` działa podobnie do `call()`, z tą różnicą, że argumenty są przekazywane jako tablica.
+
+```bash
+function greet(name, message) {
+  console.log(`${message}, ${name}! My name is ${this.name}.`);
+}
+
+const person = { name: 'John' };
+
+const args = ['Alice', 'Hello'];
+greet.apply(person, args); // Output: Hello, Alice! My name is John.
+
+```
