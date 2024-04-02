@@ -610,5 +610,56 @@ boundGreet(); // Output: Hello, John!
 
 > W tym przykładzie `bind()` jest używane do utworzenia nowej funkcji boundGreet, która zawsze będzie wywoływana w kontekście obiektu person, nawet gdy zostanie wywołana w innym kontekście. Dzięki temu, funkcja boundGreet zachowa dostęp do właściwości name obiektu person.
 
+## ➡️ What is the difference between feature detection, feature inference, and using the UA string?
 
+> <b>Feature detection</b> - polega na sprawdzaniu, czy dana przeglądarka lub urządzenie obsługuje określoną funkcję lub interfejs API przed użyciem jej w kodzie.
+```bash
+if (typeof localStorage !== 'undefined') {
+  // Przeglądarka obsługuje localStorage
+  // Możemy bezpiecznie korzystać z localStorage w naszym kodzie
+  localStorage.setItem('exampleKey', 'exampleValue');
+  console.log(localStorage.getItem('exampleKey')); // Output: exampleValue
+} else {
+  // Przeglądarka nie obsługuje localStorage
+  // Trzeba podjąć jakieś działania zastępcze lub powiadomić użytkownika o braku tej funkcjonalności
+  console.log('Twoja przeglądarka nie obsługuje funkcji localStorage.');
+}
+```
+> <b>Feature inference</b> -  to podejście, które opiera się na założeniu, że jeśli pewne funkcje lub właściwości są dostępne, to inne powiązane z nimi także powinny być dostępne. Oto przykład, w którym korzystamy z wnioskowania funkcji w JavaScript:
+
+```bash
+if (document.querySelector && window.addEventListener) {
+  // Przeglądarka obsługuje zarówno querySelector, jak i addEventListener
+  // Możemy bezpiecznie korzystać z tych funkcji w naszym kodzie
+  const element = document.querySelector('.example');
+  element.addEventListener('click', function() {
+    console.log('Kliknięto element .example');
+  });
+} else {
+  // Przeglądarka nie obsługuje jednej lub obu z tych funkcji
+  // Trzeba podjąć jakieś działania zastępcze lub powiadomić użytkownika o braku tych funkcjonalności
+  console.log('Twoja przeglądarka nie obsługuje niektórych funkcji.');
+}
+
+```
+> W tym przykładzie sprawdzamy, czy obiekt document ma metodę querySelector (do wybierania elementów za pomocą selektorów CSS) oraz czy obiekt window ma metodę addEventListener (do dodawania nasłuchiwaczy zdarzeń). Jeśli obie metody są dostępne, zakładamy, że przeglądarka obsługuje także inne funkcje związane z manipulacją DOM i obsługą zdarzeń, więc możemy bezpiecznie korzystać z nich w naszym kodzie.
+
+> <b>UA string</b> - Korzystanie z ciągu User-Agent (UA) polega na analizowaniu ciągu identyfikującego przeglądarkę i urządzenie użytkownika wysłanego w żądaniach HTTP.
+
+```bash
+const userAgent = navigator.userAgent;
+
+if (userAgent.includes('Chrome')) {
+  console.log('Użytkownik korzysta z przeglądarki Google Chrome.');
+} else if (userAgent.includes('Firefox')) {
+  console.log('Użytkownik korzysta z przeglądarki Mozilla Firefox.');
+} else if (userAgent.includes('Edge')) {
+  console.log('Użytkownik korzysta z przeglądarki Microsoft Edge.');
+} else {
+  console.log('Nie można zidentyfikować przeglądarki użytkownika.');
+}
+
+```
+
+> W tym przykładzie korzystamy z właściwości navigator.userAgent, która zawiera ciąg User-Agent aktualnej przeglądarki. Następnie sprawdzamy zawartość tego ciągu, aby określić, z jaką przeglądarką ma do czynienia użytkownik. W zależności od tego, jakie ciągi są zawarte w userAgent, możemy określić, z jaką przeglądarką korzysta użytkownik i dostosować zachowanie strony odpowiednio.
 
