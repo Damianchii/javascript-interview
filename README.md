@@ -742,3 +742,76 @@ x = 10; // Inicjalizacja zmiennej x wartością 10
 console.log(x); // Output: 10
 
 ```
+## ➡️ What is type coercion? What are common pitfalls of relying on type coercion in JavaScript code?
+
+> Type coercion in JavaScript refers to automatically transforming values from one data type to another when evaluating expressions. This process occurs when operands of different types are used in operations.
+
+> * Implicit Conversion - Type coercion may lead to unexpected behavior when values are implicitly converted to other types. For example, the addition operator (+) can concatenate strings if one of the operands is a string.
+
+```bash
+// Example 1
+console.log(5 + "5"); // Output: "55" because the number 5 is converted to a string and concatenation occurs.
+
+// Example 2
+console.log("3" - 1); // Output: 2 because the string "3" is converted to a number to enable subtraction.
+
+```
+
+> * Loss of Precision - Type coercion may lead to loss of precision when converting between numeric and text values. For example, numbers written as strings may be treated as numbers in arithmetic operations, which may lead to unintended results.
+
+```bash
+// Example 3
+console.log(0.1 + 0.2); // Output: 0.30000000000000004, due to numerical representation errors.
+
+// Example 4
+console.log("10" / 2); // Output: 5, even though "10" is a string, will be converted to a number to perform division.
+
+```
+
+> * Inconsistent Behavior - Type coercion rules may vary depending on the context and operator used. This can lead to inconsistencies and make the code harder to understand and debug.
+
+```bash
+// Example 5
+console.log(5 == "5"); // Output: true because the equality operator is type-insensitive and an implicit conversion occurs.
+
+// Example 6
+console.log(false == 0); // Output: true, which may be surprising because the logical value false is converted to the number 0.
+
+```
+
+### Co to jest przymus typu? Jakie są typowe pułapki polegające na wymuszaniu typu w kodzie JavaScript?
+
+> Type coercion w języku JavaScript odnosi się do automatycznego przekształcania wartości z jednego typu danych na inny podczas ewaluacji wyrażeń. Ten proces zachodzi, gdy operandy różnych typów są używane w operacjach.
+
+> *  Konwersja Niejawna - Type coercion może prowadzić do nieoczekiwanego zachowania, gdy wartości są niejawnie konwertowane na inne typy. Na przykład operator dodawania (+) może łączyć ciągi znaków, jeśli jeden z operandów jest ciągiem.
+
+```bash
+// Przykład 1
+console.log(5 + "5"); // Output: "55", ponieważ liczba 5 jest konwertowana na ciąg znaków i następuje konkatenacja.
+
+// Przykład 2
+console.log("3" - 1); // Output: 2, ponieważ ciąg znaków "3" jest konwertowany na liczbę, aby umożliwić odejmowanie.
+
+```
+
+> * Utrata Precyzji - Type coercion może prowadzić do utraty precyzji podczas konwersji między wartościami numerycznymi i tekstowymi. Na przykład, liczby zapisane jako ciągi znaków mogą być traktowane jako liczby w operacjach arytmetycznych, co może prowadzić do niezamierzonych wyników.
+
+```bash
+// Przykład 3
+console.log(0.1 + 0.2); // Output: 0.30000000000000004, z powodu błędów reprezentacji numerycznej.
+
+// Przykład 4
+console.log("10" / 2); // Output: 5, mimo że "10" jest ciągiem znaków, zostanie przekonwertowany na liczbę w celu wykonania dzielenia.
+
+```
+
+> * Niekonsekwentne Zachowanie - Zasady type coercion mogą się różnić w zależności od kontekstu i użytego operatora. Może to prowadzić do niekonsekwencji i sprawiać, że kod staje się trudniejszy do zrozumienia i debugowania.
+
+```bash
+// Przykład 5
+console.log(5 == "5"); // Output: true, ponieważ operator równości nie uwzględnia typów i następuje niejawna konwersja.
+
+// Przykład 6
+console.log(false == 0); // Output: true, co może być zaskakujące, ponieważ wartość logiczna false jest konwertowana na liczbę 0.
+
+```
