@@ -612,7 +612,62 @@ boundGreet(); // Output: Hello, John!
 
 ## ➡️ What is the difference between feature detection, feature inference, and using the UA string?
 
+> <b>Feature detection</b> - checks whether a given browser or device supports a specific feature or API before using it in the code.
+
+```bash
+if (typeof localStorage !== 'undefined') {
+   // The browser supports localStorage
+   // We can safely use localStorage in our code
+   localStorage.setItem('exampleKey', 'exampleValue');
+   console.log(localStorage.getItem('exampleKey')); // Output: exampleValue
+} else {
+   // The browser does not support localStorage
+   // Some workaround must be taken or the user must be notified that this functionality is missing
+   console.log('Your browser does not support localStorage.');
+}
+```
+> <b>Feature inference</b> - this is an approach that is based on the assumption that if certain features or properties are available, other features related to them should also be available. Here is an example where we use function inference in JavaScript:
+
+```bash
+if (document.querySelector && window.addEventListener) {
+   // The browser supports both querySelector and addEventListener
+   // We can safely use these functions in our code
+   const element = document.querySelector('.example');
+   element.addEventListener('click', function() {
+     console.log('The .example element was clicked');
+   });
+} else {
+   // The browser does not support one or both of these features
+   // You need to take some substitute action or notify the user about the lack of these functionalities
+   console.log('Your browser does not support some features.');
+}
+
+```
+> In this example, we check whether the document object has a querySelector method (for selecting elements using CSS selectors) and whether the window object has an addEventListener method (for adding event listeners). If both methods are available, we assume that the browser also supports other DOM manipulation and event handling features, so we can safely use them in our code.
+
+> <b>UA string</b> - Using the User-Agent (UA) string involves parsing a string identifying the user's browser and device sent in HTTP requests.
+
+```bash
+const userAgent = navigator.userAgent;
+
+if (userAgent.includes('Chrome')) {
+   console.log('The user is using Google Chrome.');
+} else if (userAgent.includes('Firefox')) {
+   console.log('The user is using Mozilla Firefox.');
+} else if (userAgent.includes('Edge')) {
+   console.log('The user is using Microsoft Edge.');
+} else {
+   console.log('The user's browser could not be identified.');
+}
+
+```
+
+> In this example, we use the navigator.userAgent property, which contains the User-Agent string of the current browser. We then check the contents of this string to determine what browser the user is dealing with. Depending on what strings are included in userAgent, we can determine what browser the user is using and adjust the page's behavior accordingly.
+
+### Jaka jest roznica miedzy feature dettaction, feature inference, i UA string ?
+
 > <b>Feature detection</b> - polega na sprawdzaniu, czy dana przeglądarka lub urządzenie obsługuje określoną funkcję lub interfejs API przed użyciem jej w kodzie.
+
 ```bash
 if (typeof localStorage !== 'undefined') {
   // Przeglądarka obsługuje localStorage
@@ -663,3 +718,27 @@ if (userAgent.includes('Chrome')) {
 
 > W tym przykładzie korzystamy z właściwości navigator.userAgent, która zawiera ciąg User-Agent aktualnej przeglądarki. Następnie sprawdzamy zawartość tego ciągu, aby określić, z jaką przeglądarką ma do czynienia użytkownik. W zależności od tego, jakie ciągi są zawarte w userAgent, możemy określić, z jaką przeglądarką korzysta użytkownik i dostosować zachowanie strony odpowiednio.
 
+## ➡️ Explain "hoisting".
+
+> <b>Hoisting</b> -  variable declarations (but not initializations) and function declarations are moved to the top of their containing scope during the compilation phase. This means that regardless of where variables and functions are declared in the code, they are treated as if they were declared at the beginning of their scope. However, only declarations are hoisted, while initializations remain in place. This can sometimes lead to unexpected behavior if not understood properly.
+
+> Initialization example: 
+```bash
+let x; // Variable declaration of x (without initialization)
+x = 10; // Initializing variable x with the value 10
+console.log(x); // Output: 10
+
+```
+
+### Wyjasnij co to jest "hoisting"
+
+
+> <b>Hoisting</b> - deklaracje zmiennych (ale nie ich inicjalizacje) oraz deklaracje funkcji są przenoszone na górę swojego zakresu podczas fazy kompilacji. Oznacza to, że bez względu na to, gdzie zmienne i funkcje są zadeklarowane w kodzie, są traktowane tak, jakby były zadeklarowane na początku swojego zakresu. Jednak tylko deklaracje są hoistowane, podczas gdy inicjalizacje pozostają na swoim miejscu. Może to czasami prowadzić do nieoczekiwanego zachowania, jeśli nie jest to właściwie zrozumiane.
+
+> Przykład inicjalizacji: 
+```bash
+let x; // Deklaracja zmiennej x (bez inicjalizacji)
+x = 10; // Inicjalizacja zmiennej x wartością 10
+console.log(x); // Output: 10
+
+```
