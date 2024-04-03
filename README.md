@@ -923,3 +923,47 @@ const propertyValue = input.value;
 console.log('Wartość właściwości:', propertyValue); // Output: Hello
 
 ```
+
+## ➡️ What are the pros and cons of extending built-in JavaScript objects?
+
+#### <b>Advantages</b>
+
+> * <b>Convenience</b> This can provide convenience by adding custom methods or properties directly to built-in objects, allowing for cleaner and more concise code.
+
+#### <b>Cons</b>
+
+> * <b>Global Scope Pollution</b> Adding methods or properties to built-in objects affects all instances of those objects throughout the application, which may lead to unintended consequences or conflicts with other libraries.
+
+> * <b>Potential Conflicts</b> There is a risk of name conflicts with existing or future methods or properties of built-in objects, especially in larger code bases or when collaborating with other developers.
+
+> * <b>Maintenance</b> Extended methods or properties may not be consistent across different environments or JavaScript engine implementations, leading to maintenance challenges and potential compatibility issues.
+
+### Jakie są zalety i wady rozszerzania wbudowanych obiektów JavaScript?
+
+#### <b>Zalety</b>
+
+> * <b>Wygodne</b> Może to zapewnić wygodę poprzez dodawanie niestandardowych metod lub właściwości bezpośrednio do wbudowanych obiektów, co pozwala na czystszy i bardziej zwięzły kod.
+
+#### <b>Wady</b>
+
+> * <b>Zanieczyszczenie globalnego zakresu</b> Dodawanie metod lub właściwości do wbudowanych obiektów wpływa na wszystkie wystąpienia tych obiektów w całej aplikacji, co może prowadzić do niezamierzonych skutków lub konfliktów z innymi bibliotekami.
+
+> * <b>Potencjalne konflikty</b> Istnieje ryzyko konfliktów nazw z istniejącymi lub przyszłymi metodami lub właściwościami wbudowanych obiektów, zwłaszcza w większych bazach kodu lub podczas współpracy z innymi programistami.
+
+> * <b>Konserwacja</b> Rozszerzone metody lub właściwości mogą nie być spójne w różnych środowiskach lub implementacjach silników JavaScript, co prowadzi do wyzwań konserwacyjnych i potencjalnych problemów z kompatybilnością.
+
+```bash
+// Rozszerzenie wbudowanego obiektu Array o metodę do sumowania elementów
+Array.prototype.sum = function() {
+    let total = 0;
+    for (let i = 0; i < this.length; i++) {
+        total += this[i];
+    }
+    return total;
+};
+
+// Użycie nowej metody sum() na tablicy
+const numbers = [1, 2, 3, 4, 5];
+console.log(numbers.sum()); // Output: 15
+
+```
