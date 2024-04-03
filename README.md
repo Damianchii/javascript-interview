@@ -815,3 +815,77 @@ console.log(5 == "5"); // Output: true, ponieważ operator równości nie uwzgl�
 console.log(false == 0); // Output: true, co może być zaskakujące, ponieważ wartość logiczna false jest konwertowana na liczbę 0.
 
 ```
+
+## ➡️ Describe event bubbling.
+
+> > Event bubbling is a mechanism in the DOM (Document Object Model) in which an event fired on a nested element propagates up through its ancestors in the DOM hierarchy. When an event occurs on an element, such as a button click event, the event first fires on the target element. The event then propagates up through the target element's ancestors, triggering the same event on every ancestor element in the hierarchy
+
+> Event bubbling provides a convenient way to handle events in a more general and centralized way. Instead of attaching event listeners to each individual element, you can attach event listeners to their common ancestor and let the events ascend to that ancestor
+
+### Opisz zdarzenie bubblingu
+
+> Event bubbling to mechanizm w DOM (Modelu Obiektowym Dokumentu), w którym zdarzenie wywołane na zagnieżdżonym elemencie propaguje się w górę poprzez jego przodków w hierarchii DOM.Kiedy zdarzenie występuje na elemencie, takim jak zdarzenie kliknięcia na przycisku, zdarzenie najpierw wywołuje się na docelowym elemencie. Następnie zdarzenie wznosi się w górę przez elementy nadrzędne docelowego elementu, wywołując to samo zdarzenie na każdym elemencie przodka w hierarchii
+
+> Bąbelkowanie zdarzeń zapewnia wygodny sposób obsługi zdarzeń w bardziej ogólny i scentralizowany sposób. Zamiast dołączać nasłuchiwacze zdarzeń do każdego indywidualnego elementu, można dołączyć nasłuchiwacze zdarzeń do ich wspólnego przodka i pozwolić zdarzeniom wznosić się do tego przodka
+
+```bash
+<ul id="parentList">
+  <li id="item1">Element 1</li>
+  <li id="item2">Element 2</li>
+  <li id="item3">Element 3</li>
+</ul>
+
+```
+
+```bash
+const parentList = document.getElementById('parentList');
+const items = document.getElementsByTagName('li');
+
+parentList.addEventListener('click', function(event) {
+  console.log('Zdarzenie kliknięcia na rodzicu');
+});
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener('click', function(event) {
+    console.log('Click element: ' + i);
+  });
+}
+
+```
+
+## ➡️ Describe event capturing.
+
+> Unlike event bubbling, which starts from the target element and bubbles up through its ancestors, event capturing starts from the top of the DOM tree and descends down to the target element.
+
+### Opisz zdarzenie capturing(przechwytywanie)
+
+> W przeciwieństwie do bąbelkowania zdarzeń, które rozpoczyna się od elementu docelowego i wznosi się w górę przez jego przodków, przechwytywanie zdarzeń rozpoczyna się od samej góry drzewa DOM i schodzi w dół do elementu docelowego.
+
+```bash
+<div id="outer">
+  <div id="inner">
+    <button id="button">Kliknij mnie</button>
+  </div>
+</div>
+
+```
+
+```bash
+const outer = document.getElementById('outer');
+const inner = document.getElementById('inner');
+const button = document.getElementById('button');
+
+outer.addEventListener('click', function(event) {
+  console.log('Zdarzenie przechwycone na elemencie o id "outer"');
+}, true);
+
+inner.addEventListener('click', function(event) {
+  console.log('Zdarzenie przechwycone na elemencie o id "inner"');
+});
+
+button.addEventListener('click', function(event) {
+  console.log('Zdarzenie przechwycone na elemencie o id "button"');
+});
+
+```
+## ➡️
