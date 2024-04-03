@@ -889,3 +889,32 @@ button.addEventListener('click', function(event) {
 
 ```
 ## ➡️
+
+> * Attributes - are defined in HTML and provide initial values for elements
+
+> * Properties - are JavaScript objects that represent the state of HTML elements. They can be accessed and modified dynamically using JavaScript. Properties can change while the program is running and reflect the current state of the element
+
+> *  Atrybuty - są zdefiniowane w HTML i dostarczają początkowych wartości elementom
+
+> * Właściwości - są obiektami JavaScript, które reprezentują stan elementów HTML. Mogą być one dostępne i modyfikowane dynamicznie za pomocą JavaScriptu. Właściwości mogą zmieniać się podczas działania programu i odzwierciedlają aktualny stan elementu
+
+> * `getAttribute('value')` zwraca początkową wartość atrybutu "value" określoną w HTML, która wynosi "Hello".
+> * `input.value` zwraca aktualną wartość właściwości "value" elementu, która również wynosi "Hello", ale może być zmieniona dynamicznie podczas działania skryptu lub interakcji użytkownika.
+
+```bash
+<input id="myInput" type="text" value="Hello">
+
+```
+
+```bash
+const input = document.getElementById('myInput');
+
+// Pobranie wartości atrybutu
+const attributeValue = input.getAttribute('value');
+console.log('Wartość atrybutu:', attributeValue); // Output: Hello
+
+// Pobranie wartości właściwości
+const propertyValue = input.value;
+console.log('Wartość właściwości:', propertyValue); // Output: Hello
+
+```
