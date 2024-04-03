@@ -975,3 +975,27 @@ console.log(numbers.sum()); // Output: 15
 ### Jaka jest roznica miedzy `==` a `===` ?
 
 > `==` wykonuje konwersję typów przed porównaniem, podczas gdy `===` nie wykonuje konwersji typów i wymaga, aby zarówno wartość, jak i typ były identyczne dla poprawnego porównania.
+
+## ➡️ Explain the same-origin policy with regards to JavaScript.
+
+> Same-Origin Policy in the context of JavaScript is a security policy used by web browsers that limits the interactions of JavaScript scripts with resources on websites to the same origins (same protocols, domains and ports). This means that a script on one web page has limited access to resources (e.g. data, DOM objects) on other web pages.
+
+> For example, if a script is located on a page at https://example.com, it can use data located on the same page or on other pages at https://example.com/foo or https:/ /example.com/bar, but will not be able to access resources on sites with other addresses, such as https://example.org or http://example.com:8080.
+
+### Wyjaśnij zasady tego samego pochodzenia w odniesieniu do JavaScript.
+
+> Polityka tej samej domeny (Same-Origin Policy) w kontekście JavaScriptu to zasada bezpieczeństwa stosowana przez przeglądarki internetowe, która ogranicza interakcje skryptów JavaScript z zasobami na stronach internetowych do tych samych źródeł (takich samych protokołów, domen i portów). Oznacza to, że skrypt na jednej stronie internetowej ma ograniczony dostęp do zasobów (np. danych, obiektów DOM) na innych stronach internetowych.
+
+> Na przykład, jeśli skrypt znajduje się na stronie o adresie https://example.com, może on korzystać z danych znajdujących się na tej samej stronie lub na innych stronach o adresach https://example.com/foo lub https://example.com/bar, ale nie będzie mógł uzyskać dostępu do zasobów na stronach o innych adresach, takich jak https://example.org czy http://example.com:8080.
+
+## ➡️ Why is it called a Ternary operator, what does the word "Ternary" indicate?
+
+> The Ternary operator in JavaScript is denoted by ? :, and it is used as a shorthand for an if-else statement.
+
+```bash
+arr1 ? arr2 : arr3
+```
+
+### Dlaczego nazywa się to operatorem trójskładnikowym, co oznacza słowo „trójskładnikowy”?
+
+>  Operator trójargumentowy w JavaScript jest oznaczony jako ? :, i jest używany jako skrót dla instrukcji warunkowej if-else.
