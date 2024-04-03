@@ -967,3 +967,11 @@ const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.sum()); // Output: 15
 
 ```
+
+## ➡️ What is the difference between `==` and `===`?
+
+> `==` performs type coercion before comparison, while `===` does not perform type coercion and requires both value and type to be equal for true comparison.
+
+### Jaka jest roznica miedzy `==` a `===` ?
+
+> `==` wykonuje konwersję typów przed porównaniem, podczas gdy `===` nie wykonuje konwersji typów i wymaga, aby zarówno wartość, jak i typ były identyczne dla poprawnego porównania.
