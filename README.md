@@ -888,11 +888,16 @@ button.addEventListener('click', function(event) {
 });
 
 ```
-## ➡️
+## ➡️ What is the difference between an "attribute" and a "property"?
 
 > * Attributes - are defined in HTML and provide initial values for elements
 
 > * Properties - are JavaScript objects that represent the state of HTML elements. They can be accessed and modified dynamically using JavaScript. Properties can change while the program is running and reflect the current state of the element
+
+> * `getAttribute('value')` returns the initial value of the "value" attribute specified in the HTML, which is "Hello".
+> * `input.value` returns the current value of the element's "value" property, which is also "Hello", but can be changed dynamically during script execution or user interaction.
+
+### Jaka jest różnica między „atrybutem” a „właściwością”?
 
 > *  Atrybuty - są zdefiniowane w HTML i dostarczają początkowych wartości elementom
 
