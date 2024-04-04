@@ -990,7 +990,7 @@ console.log(numbers.sum()); // Output: 15
 
 ## ➡️ Why is it called a Ternary operator, what does the word "Ternary" indicate?
 
-> The Ternary operator in JavaScript is denoted by ? :, and it is used as a shorthand for an if-else statement.
+> The Ternary operator in JavaScript is denoted by `? :`, and it is used as a shorthand for an if-else statement.
 
 ```bash
 arr1 ? arr2 : arr3
@@ -998,4 +998,67 @@ arr1 ? arr2 : arr3
 
 ### Dlaczego nazywa się to operatorem trójskładnikowym, co oznacza słowo „trójskładnikowy”?
 
->  Operator trójargumentowy w JavaScript jest oznaczony jako ? :, i jest używany jako skrót dla instrukcji warunkowej if-else.
+> Operator trójskładnikowy w JavaScript jest oznaczony przez `? :` i jest używany jako skrót instrukcji if-else.
+
+## ➡️ What is strict mode? What are some of the advantages/disadvantages of using it?
+
+> Strict mode offers several advantages in terms of preventing errors, improving performance, strengthening security and code quality, but also comes with potential disadvantages in terms of backward compatibility, learning curve and stricter requirements. Developers should carefully consider the tradeoffs and use strict mode carefully, depending on design requirements and coding practices
+
+#### Advantages
+
+> * <b>Error Prevention</b> Strict mode helps catch common errors in your code and prevents potentially problematic code structures from being executed silently. This makes it easier to track errors in your code and makes debugging easier.
+
+> * <b>Performance Improvements</b> In some cases, strict mode code may be more aggressively optimized by JavaScript engines, which may lead to potential performance improvements.
+
+> * <b>Security Hardening</b> By preventing certain unsafe or risky coding practices, strict mode can improve the security of JavaScript applications and reduce the risk of vulnerabilities.
+
+> * <b>Improving Development Practices</b> Strict mode encourages developers to follow best practices and write cleaner, more robust code by applying stricter rules and standards.
+
+#### Cons
+> * <b>Backward Compatibility</b> Strict mode may break existing code that relies on non-strict behavior. Enabling strict mode in older codes may require significant modifications to match.
+
+> * <b>Learning Curve</b> Developers who are new to strict mode may initially have difficulty understanding its limitations and adapting their coding practices.
+
+> * <b>Strict Requirements</b> Strict mode places more stringent requirements on your code, which may restrict certain programming techniques or patterns that were previously allowed.
+
+### Co to jest tryb ścisły? Jakie są zalety/wady korzystania z niego?
+
+> Tryb ścisły oferuje kilka zalet w zakresie zapobiegania błędom, poprawy wydajności, wzmocnienia bezpieczeństwa i jakości kodu, towarzyszą mu także potencjalne wady związane z zgodnością wsteczną, krzywą uczenia się i surowszymi wymaganiami. Programiści powinni dokładnie rozważyć kompromisy i używać trybu ścisłego z rozwagą, w zależności od wymagań projektowych i praktyk kodowania
+
+#### Zalety
+
+> * <b>Zapobieganie Błędom</b> Tryb ścisły pomaga wyłapywać powszechne błędy w kodzie i uniemożliwia wykonywanie potencjalnie problematycznych konstrukcji kodu w sposób cichy. Ułatwia to śledzenie błędów w kodzie i ułatwia debugowanie.
+
+> * <b>Poprawa Wydajności</b> W niektórych przypadkach kod w trybie ścisłym może być bardziej agresywnie zoptymalizowany przez silniki JavaScript, co może prowadzić do potencjalnych ulepszeń wydajnościowych.
+
+> * <b>Wzmocnienie Bezpieczeństwa</b> Poprzez uniemożliwianie pewnych niebezpiecznych lub ryzykownych praktyk kodowania, tryb ścisły może poprawić bezpieczeństwo aplikacji JavaScript i zmniejszyć ryzyko wystąpienia podatności.
+
+> * <b>Poprawa Praktyk Programistycznych</b> Tryb ścisły zachęca programistów do stosowania najlepszych praktyk i pisania czystszych, bardziej solidnych kodów, stosując bardziej restrykcyjne reguły i standardy.
+
+#### Wady
+> * <b>Zgodność Wsteczna</b>  Tryb ścisły może naruszyć istniejący kod, który polega na nieścisłym zachowaniu. Włączenie trybu ścisłego w starszych kodach może wymagać znacznych modyfikacji, aby je dopasować.
+
+> * <b>Krzywa Uczenia</b>  Programiści, którzy dopiero zaczynają korzystać z trybu ścisłego, mogą początkowo mieć trudności z zrozumieniem jego ograniczeń i dostosowaniem swoich praktyk kodowania.
+
+> * <b>Surowe Wymagania</b>  Tryb ścisły nakłada bardziej restrykcyjne wymagania na kod, co może ograniczać pewne techniki programowania lub wzorce, które wcześniej były dozwolone.
+
+```bash
+// Kod bez trybu ścisłego
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(1, 2)); // Output: 3
+console.log(add('1', '2')); // Output: '12' (konkatenacja stringów)
+
+// Kod z trybem ścisłym
+'use strict';
+
+function addStrict(a, b) {
+    return a + b;
+}
+
+console.log(addStrict(1, 2)); // Output: 3
+console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to number (błąd)
+
+```
