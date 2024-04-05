@@ -1062,3 +1062,5 @@ console.log(addStrict(1, 2)); // Output: 3
 console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to number (błąd)
 
 ```
+
+asdasdasdasdasda
