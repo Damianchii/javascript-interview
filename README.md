@@ -1063,4 +1063,30 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 
 ```
 
-asdasdasdasdasda
+## ➡️ What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
+#### Advantages
+
+> * <b>Extended Language Features</b> These languages often provide additional features and syntactic improvements not found in pure JavaScript, such as static typing, classes, interfaces, and modules. This can lead to more readable, organized code and reduce the risk of errors.
+
+> * <b> Tool Support</b> Many of these languages are supported by robust tools, including compilers, linters, and IDE integrations, which can help improve code quality, enforce coding standards, and optimize the development process.
+
+#### Defects
+
+> * <b> Learning Curve</b> Developers must learn the syntax, features, and nuances of the language that compiles to JavaScript, which can initially increase the learning curve, especially for developers who already know JavaScript well.
+
+> * <b> Build Effort</b> Adding a build step introduces additional complexity to the development process and can increase build times, especially in larger projects. This overhead may be negligible for smaller projects, but can become significant in larger, more complex applications.
+
+### Jakie są zalety/wady pisania kodu JavaScript w języku kompilującym się do JavaScript?
+
+#### Zalety
+
+> * <b>Rozszerzone Funkcje Językowe</b> Te języki często dostarczają dodatkowych funkcji i ulepszeń składniowych, których nie ma w czystym JavaScript, takich jak statyczne typowanie, klasy, interfejsy i moduły. Może to prowadzić do bardziej czytelnego, zorganizowanego kodu i zmniejszać ryzyko wystąpienia błędów.
+
+> * <b> Wsparcie Narzędziowe</b> Wiele z tych języków jest wspieranych przez solidne narzędzia, w tym kompilatory, lintery i integracje z IDE, co może pomóc poprawić jakość kodu, narzucić standardy kodowania i zoptymalizować proces deweloperski.
+
+#### Wady
+
+> * <b> Krzywa Uczenia</b> Deweloperzy muszą nauczyć się składni, funkcji i niuansów języka kompilującego się do JavaScript, co początkowo może zwiększyć krzywą uczenia się, szczególnie dla deweloperów, którzy już dobrze znają JavaScript.
+
+> * <b> Nakład Kompilacji</b> Dodanie etapu kompilacji wprowadza dodatkową złożoność do procesu deweloperskiego i może zwiększyć czas kompilacji, szczególnie w większych projektach. Ten nakład może być pomijalny dla mniejszych projektów, ale może stać się istotny w większych, bardziej złożonych aplikacjach.
