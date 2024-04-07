@@ -1090,3 +1090,20 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 > * <b> Krzywa Uczenia</b> Deweloperzy muszą nauczyć się składni, funkcji i niuansów języka kompilującego się do JavaScript, co początkowo może zwiększyć krzywą uczenia się, szczególnie dla deweloperów, którzy już dobrze znają JavaScript.
 
 > * <b> Nakład Kompilacji</b> Dodanie etapu kompilacji wprowadza dodatkową złożoność do procesu deweloperskiego i może zwiększyć czas kompilacji, szczególnie w większych projektach. Ten nakład może być pomijalny dla mniejszych projektów, ale może stać się istotny w większych, bardziej złożonych aplikacjach.
+
+## ➡️ What tools and techniques do you use debugging JavaScript code?
+
+> * <b>Browser Developer Tools</b> I make use of built-in developer tools available in web browsers, such as Chrome DevTools, Firefox Developer Tools, or Microsoft Edge Developer Tools. These tools offer features like DOM element inspection, JavaScript debugging, network monitoring, performance profiling, and many other useful tools for code analysis and debugging.
+
+`console.log()` I often employ the technique of adding `console.log()` statements to the code to display variable values, check control flow, and track code execution. It's a quick way to diagnose errors and monitor code behavior.
+
+> * <b>Isolation Testing</b> I frequently isolate the problematic code snippet and test it in isolation to identify whether the issue lies within that specific code snippet or stems from interactions with other parts of the application.
+
+### Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
+
+> * <b>Przeglądarkowych Narzędzi Deweloperskich</b> Korzystam z wbudowanych narzędzi deweloperskich dostępnych w przeglądarkach internetowych, takich jak Chrome DevTools, Firefox Developer Tools czy Microsoft Edge Developer Tools. Te narzędzia oferują funkcje takie jak inspekcja elementów DOM, debugowanie JavaScriptu, monitorowanie sieci, profilowanie wydajności i wiele innych przydatnych narzędzi do analizy i debugowania kodu.
+
+> * <b>`console.log()`</b> Często stosuję technikę dodawania instrukcji `console.log()` do kodu w celu wyświetlenia wartości zmiennych, sprawdzenia przepływu sterowania i śledzenia wykonania kodu. Jest to szybki sposób na diagnostykę błędów i monitorowanie zachowania kodu.
+
+> * <b>Testowanie w Izolacji</b> Często izoluję problematyczny fragment kodu i testuję go w izolacji, aby zidentyfikować, czy problem występuje w danym fragmencie kodu czy może wynika z interakcji z innymi częściami aplikacji.
+
