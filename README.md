@@ -1095,7 +1095,7 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 
 > * <b>Browser Developer Tools</b> I make use of built-in developer tools available in web browsers, such as Chrome DevTools, Firefox Developer Tools, or Microsoft Edge Developer Tools. These tools offer features like DOM element inspection, JavaScript debugging, network monitoring, performance profiling, and many other useful tools for code analysis and debugging.
 
-`console.log()` I often employ the technique of adding `console.log()` statements to the code to display variable values, check control flow, and track code execution. It's a quick way to diagnose errors and monitor code behavior.
+> * <b>`console.log()`</b> I often employ the technique of adding `console.log()` statements to the code to display variable values, check control flow, and track code execution. It's a quick way to diagnose errors and monitor code behavior.
 
 > * <b>Isolation Testing</b> I frequently isolate the problematic code snippet and test it in isolation to identify whether the issue lies within that specific code snippet or stems from interactions with other parts of the application.
 
