@@ -1103,6 +1103,8 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 
 > * <b>Przeglądarkowych Narzędzi Deweloperskich</b> Korzystam z wbudowanych narzędzi deweloperskich dostępnych w przeglądarkach internetowych, takich jak Chrome DevTools, Firefox Developer Tools czy Microsoft Edge Developer Tools. Te narzędzia oferują funkcje takie jak inspekcja elementów DOM, debugowanie JavaScriptu, monitorowanie sieci, profilowanie wydajności i wiele innych przydatnych narzędzi do analizy i debugowania kodu.
 
+///helooo
+
 > * <b>`console.log()`</b> Często stosuję technikę dodawania instrukcji `console.log()` do kodu w celu wyświetlenia wartości zmiennych, sprawdzenia przepływu sterowania i śledzenia wykonania kodu. Jest to szybki sposób na diagnostykę błędów i monitorowanie zachowania kodu.
 
 > * <b>Testowanie w Izolacji</b> Często izoluję problematyczny fragment kodu i testuję go w izolacji, aby zidentyfikować, czy problem występuje w danym fragmencie kodu czy może wynika z interakcji z innymi częściami aplikacji.
