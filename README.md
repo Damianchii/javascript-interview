@@ -1110,3 +1110,4 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 > * <b>Testowanie w Izolacji</b> Często izoluję problematyczny fragment kodu i testuję go w izolacji, aby zidentyfikować, czy problem występuje w danym fragmencie kodu czy może wynika z interakcji z innymi częściami aplikacji.
 
 //asdadsad
+//asdasd
