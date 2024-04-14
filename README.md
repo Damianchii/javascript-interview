@@ -20,7 +20,7 @@
 </ul>
 
 ```
-//asdasd
+
 > You can then use JavaScript to assign the click event handler to the `taskList` container and then delegate the event:
 
 ``` bash
@@ -1103,11 +1103,21 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 
 > * <b>Przeglądarkowych Narzędzi Deweloperskich</b> Korzystam z wbudowanych narzędzi deweloperskich dostępnych w przeglądarkach internetowych, takich jak Chrome DevTools, Firefox Developer Tools czy Microsoft Edge Developer Tools. Te narzędzia oferują funkcje takie jak inspekcja elementów DOM, debugowanie JavaScriptu, monitorowanie sieci, profilowanie wydajności i wiele innych przydatnych narzędzi do analizy i debugowania kodu.
 
-///helooo
-
 > * <b>`console.log()`</b> Często stosuję technikę dodawania instrukcji `console.log()` do kodu w celu wyświetlenia wartości zmiennych, sprawdzenia przepływu sterowania i śledzenia wykonania kodu. Jest to szybki sposób na diagnostykę błędów i monitorowanie zachowania kodu.
 
 > * <b>Testowanie w Izolacji</b> Często izoluję problematyczny fragment kodu i testuję go w izolacji, aby zidentyfikować, czy problem występuje w danym fragmencie kodu czy może wynika z interakcji z innymi częściami aplikacji.
 
-//asdadsad
-//asdasd
+## ➡️ Explain the difference between mutable and immutable objects
+
+
+
+### Wyjaśnij różnicę pomiędzy obiektami mutowalnymi i niemutowalnymi
+
+> Obiekty mutowalne są tymi, których stan może być modyfikowany po ich utworzeniu, podczas gdy obiekty niemutowalne są tymi, których stan nie może być zmieniony po utworzeniu.
+
+> * Przykład obiektów niemutowalnych :  liczby, ciągi znaków i wartości logiczne
+
+```bash
+let num = 5; // Niemutowalna liczba
+num = 10;    // To tworzy nową liczbę o wartości 10 i przypisuje ją do num
+```
