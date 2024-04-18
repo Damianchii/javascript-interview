@@ -15,12 +15,12 @@
 ``` bash
 <ul id="taskList">
   <li>Dish washes</li>
-  <li>Buy milk</li>asd
+  <li>Buy milk</li>
   <li>Tidy room</li>
 </ul>
 
 ```
-//comment
+
 > You can then use JavaScript to assign the click event handler to the `taskList` container and then delegate the event:
 
 ``` bash
@@ -1109,7 +1109,22 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 
 ## ➡️ Explain the difference between mutable and immutable objects
 
+> Mutable objects are those whose state can be modified after creation, while immutable objects are those whose state cannot be changed after creation.
 
+> * Example of immutable object - numbers, strings and boolean
+
+```bash
+let num = 5; // immbutable number
+num = 10;    // This creates a new number with value 10 and assigns it to num
+```
+
+> * Example of mutable object 
+
+```bash
+let arr = [1, 2, 3]; // Mutable array
+arr.push(4);         // Modifies arrays by adding an element
+
+```
 
 ### Wyjaśnij różnicę pomiędzy obiektami mutowalnymi i niemutowalnymi
 
@@ -1120,4 +1135,71 @@ console.log(addStrict('1', '2')); // Output: TypeError: Cannot convert string to
 ```bash
 let num = 5; // Niemutowalna liczba
 num = 10;    // To tworzy nową liczbę o wartości 10 i przypisuje ją do num
+```
+
+> * Przykład obiektów mutowalnych - tablice, obiekty
+
+```bash
+let arr = [1, 2, 3]; // Mutowalna tablica
+arr.push(4);         // Modyfikuje tablicę przez dodanie elementu
+
+```
+## ➡️ Explain the difference between synchronous and asynchronous functions.
+
+> * Synchronous functions are those that execute one after the other, in the order they are called, and each function must complete before the next one begins. In other words, synchronous functions block further execution of code until they finish.
+
+```bash
+console.log('Start');
+const data = fetchData(); // Ta funkcja może chwilę trwać
+console.log('Data:', data); // Wykonanie kodu czeka, aż fetchData() zakończy działanie
+console.log('End');
+
+// Start
+// Data: data
+// End
+```
+
+> * Asynchronous functions, on the other hand, allow other code to run while they execute in the background. Instead of waiting for an operation to complete, asynchronous functions return immediately, and the program continues to execute. Once the asynchronous operation finishes, a callback function is called to handle the result.
+
+```bash
+console.log('Start');
+fetchData((data) => { // Ta funkcja działa asynchronicznie
+  console.log('Data:', data); // Ta linia zostanie wykonana później
+});
+console.log('End');
+
+// Start
+// End
+// Data: data
+
+```
+
+### Wyjasnij roznice miedzy sychronicznymi a asynchronicznymi funkcjami
+
+> * Funkcje synchroniczne są tymi, które wykonują się kolejno, w kolejności, w jakiej są wywoływane, i każda funkcja musi zakończyć się przed rozpoczęciem następnej. Innymi słowy, funkcje synchroniczne blokują dalsze wykonywanie kodu, dopóki się nie zakończą.
+
+```bash
+console.log('Start');
+const data = fetchData(); // Ta funkcja może chwilę trwać
+console.log('Data:', data); // Wykonanie kodu czeka, aż fetchData() zakończy działanie
+console.log('End');
+
+// Start
+// Data: data
+// End
+```
+
+> *  Funkcje asynchroniczne pozwalają na wykonywanie innego kodu podczas ich wykonywania się w tle. Zamiast czekać, aż operacja zostanie zakończona, funkcje asynchroniczne zwracają natychmiast, a program kontynuuje wykonywanie. Po zakończeniu operacji asynchronicznej wywoływana jest funkcja zwrotna (callback), która obsługuje wynik.
+
+```bash
+console.log('Start');
+fetchData((data) => { // Ta funkcja działa asynchronicznie
+  console.log('Data:', data); // Ta linia zostanie wykonana później
+});
+console.log('End');
+
+// Start
+// End
+// Data: data
+
 ```
