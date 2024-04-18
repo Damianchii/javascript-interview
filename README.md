@@ -1227,3 +1227,26 @@ console.log('End');
 > * Pętla Zdarzeń: Pętla zdarzeń ciągle monitoruje stos wywołań i kolejkę zadań. Jeśli stos wywołań jest pusty, pętla zdarzeń pobiera pierwszą funkcję z kolejki zadań i dodaje ją na stos, aby została wykonana
 
 > Ten proces powtarza się w nieskończoność, umożliwiając JavaScriptowi skuteczne obsługiwanie operacji asynchronicznych bez blokowania głównego wątku. Zapewnia to, że wykonanie kodu JavaScript pozostaje nieblokujące i responsywne, nawet przy wykonywaniu czasochłonnych zadań lub operacji wejścia/wyjścia.
+
+## ➡️ What are the differences between variables created using `let`, `var` or `const`?
+
+### Jakie sa roznice miedzy zmiennymi `let`, `var` i `const`
+
+> * <b>Zasięg</b>
+> * `var` Zasięg funkcji lub globalny.
+> * `let` Zasięg blokowy.
+> * `const` Zasięg blokowy.
+Hoisting:
+var: Podnoszone na górę swojej funkcji lub globalnego zakresu i inicjowane jako undefined.
+let: Podnoszone na górę swojego blokowego zakresu, ale nieinicjowane. Dostęp do nich przed deklaracją powoduje ReferenceError.
+const: Podobnie jak let, nieinicjowane i również nie można ich ponownie przypisać. Dostęp do nich przed deklaracją również powoduje ReferenceError.
+Przypisanie ponowne:
+var: Może być ponownie przypisany i ponownie zadeklarowany w swoim zakresie.
+let: Może być ponownie przypisany w swoim zakresie, ale nie może być ponownie zadeklarowany.
+const: Nie może być ponownie przypisany ani ponownie zadeklarowany. Jednak obiekty i tablice zadeklarowane jako const mogą nadal być modyfikowane.
+Strefa martwego kodu (TDZ):
+var: Brak strefy martwego kodu, zmienne są inicjowane jako undefined.
+let i const: Istnieje strefa martwego kodu, dostęp do nich przed deklaracją powoduje ReferenceError.
+Właściwość globalnego obiektu:
+var: Deklaruje właściwość na obiekcie globalnym (window w przeglądarkach).
+let i const: Nie tworzą właściwości na obiekcie globalnym, gdy są deklarowane globalnie.
