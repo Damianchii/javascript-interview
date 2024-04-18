@@ -1203,3 +1203,27 @@ console.log('End');
 // Data: data
 
 ```
+
+## ➡️ What is event loop?
+
+> This is how the event loop works
+
+> * Call Stack JavaScript is single-threaded, meaning it can only execute one piece of code at a time. The call stack is a data structure that keeps track of the currently executing function or context. When a function is called, it is pushed onto the stack, and when it returns, it is popped off the stack.
+
+> * Task Queue (Callback Queue) Asynchronous operations, such as setTimeout callbacks, DOM events, or AJAX requests, are handled separately from the call stack. When these operations complete, their callback functions are placed into the task queue.
+
+> * Event Loop The event loop continuously monitors the call stack and the task queue. If the call stack is empty, it takes the first function from the task queue and pushes it onto the call stack to be executed.
+
+> This process repeats indefinitely, allowing JavaScript to handle asynchronous operations efficiently without blocking the main thread. It ensures that the execution of JavaScript code remains non-blocking and responsive, even when dealing with time-consuming tasks or I/O operations.
+
+### Jak działa petla zdarzen
+
+> Oto jak działa pętla zdarzen
+
+> * Stos Wywołań JavaScript jest jednowątkowy, co oznacza, że może wykonywać tylko jedną część kodu na raz. Stos wywołań to struktura danych, która śledzi aktualnie wykonywaną funkcję lub kontekst. Gdy funkcja jest wywoływana, jest dodawana na stos, a gdy zwraca wartość, jest zdejmowana ze stosu
+
+> * Kolejka Zadań (Kolejka Zwrotnych Funkcji): Operacje asynchroniczne, takie jak zwroty z funkcji setTimeout, zdarzenia DOM lub żądania AJAX, są obsługiwane oddzielnie od stosu wywołań. Gdy te operacje zostają zakończone, ich funkcje zwrotne są umieszczane w kolejce zadań
+
+> * Pętla Zdarzeń: Pętla zdarzeń ciągle monitoruje stos wywołań i kolejkę zadań. Jeśli stos wywołań jest pusty, pętla zdarzeń pobiera pierwszą funkcję z kolejki zadań i dodaje ją na stos, aby została wykonana
+
+> Ten proces powtarza się w nieskończoność, umożliwiając JavaScriptowi skuteczne obsługiwanie operacji asynchronicznych bez blokowania głównego wątku. Zapewnia to, że wykonanie kodu JavaScript pozostaje nieblokujące i responsywne, nawet przy wykonywaniu czasochłonnych zadań lub operacji wejścia/wyjścia.
