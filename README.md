@@ -1230,23 +1230,42 @@ console.log('End');
 
 ## ➡️ What are the differences between variables created using `let`, `var` or `const`?
 
+> <b>Range</b>
+> * `var` Function scope or global scope.
+> * `let` Block scope.
+> * `const` Block scope.
+> <b>Hoisting</b>
+> * `var` Raised to the top of its function or global scope and initialized to undefined.
+> * `let` Raised to the top of its block scope, but not initialized. Accessing them before declaration causes a ReferenceError.
+> * `const` Like let, uninitialized and also cannot be reassigned. Accessing them before declaration also causes a ReferenceError.
+> <b>Reassignment</b>
+> * `var` Can be reassigned and redeclared in its scope.
+> * `let` Can be reassigned within its scope, but cannot be redeclared.
+> * `const` Cannot be reassigned or redeclared. However, objects and arrays declared as const can still be modified.
+> <b>Code Dead Zone (TDZ)</b>
+> * `var` No code dead zone, variables are initialized to undefined.
+> * `let` and `const` There is a dead code zone, accessing them before declaration causes a ReferenceError.
+> <b>Global object property</b>
+> * `var` Declares a property on a global object (window in browsers).
+> * `let` and `const` Do not create properties on the global object when declared globally.
+
 ### Jakie sa roznice miedzy zmiennymi `let`, `var` i `const`
 
-> * <b>Zasięg</b>
+> <b>Zasięg</b>
 > * `var` Zasięg funkcji lub globalny.
 > * `let` Zasięg blokowy.
 > * `const` Zasięg blokowy.
-Hoisting:
-var: Podnoszone na górę swojej funkcji lub globalnego zakresu i inicjowane jako undefined.
-let: Podnoszone na górę swojego blokowego zakresu, ale nieinicjowane. Dostęp do nich przed deklaracją powoduje ReferenceError.
-const: Podobnie jak let, nieinicjowane i również nie można ich ponownie przypisać. Dostęp do nich przed deklaracją również powoduje ReferenceError.
-Przypisanie ponowne:
-var: Może być ponownie przypisany i ponownie zadeklarowany w swoim zakresie.
-let: Może być ponownie przypisany w swoim zakresie, ale nie może być ponownie zadeklarowany.
-const: Nie może być ponownie przypisany ani ponownie zadeklarowany. Jednak obiekty i tablice zadeklarowane jako const mogą nadal być modyfikowane.
-Strefa martwego kodu (TDZ):
-var: Brak strefy martwego kodu, zmienne są inicjowane jako undefined.
-let i const: Istnieje strefa martwego kodu, dostęp do nich przed deklaracją powoduje ReferenceError.
-Właściwość globalnego obiektu:
-var: Deklaruje właściwość na obiekcie globalnym (window w przeglądarkach).
-let i const: Nie tworzą właściwości na obiekcie globalnym, gdy są deklarowane globalnie.
+> <b>Hoisting</b>
+> * `var` Podnoszone na górę swojej funkcji lub globalnego zakresu i inicjowane jako undefined.
+> * `let` Podnoszone na górę swojego blokowego zakresu, ale nieinicjowane. Dostęp do nich przed deklaracją powoduje ReferenceError.
+> * `const` Podobnie jak let, nieinicjowane i również nie można ich ponownie przypisać. Dostęp do nich przed deklaracją również powoduje ReferenceError.
+> <b>Przypisanie ponowne</b>
+> * `var` Może być ponownie przypisany i ponownie zadeklarowany w swoim zakresie.
+> * `let` Może być ponownie przypisany w swoim zakresie, ale nie może być ponownie zadeklarowany.
+> * `const` Nie może być ponownie przypisany ani ponownie zadeklarowany. Jednak obiekty i tablice zadeklarowane jako const mogą nadal być modyfikowane.
+> <b>Strefa martwego kodu (TDZ)</b>
+> * `var` Brak strefy martwego kodu, zmienne są inicjowane jako undefined.
+> * `let` i `const` Istnieje strefa martwego kodu, dostęp do nich przed deklaracją powoduje ReferenceError.
+> <b>Właściwość globalnego obiektu</b>
+> * `var` Deklaruje właściwość na obiekcie globalnym (window w przeglądarkach).
+> * `let` i `const` Nie tworzą właściwości na obiekcie globalnym, gdy są deklarowane globalnie.
