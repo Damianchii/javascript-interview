@@ -35,7 +35,7 @@ taskList.addEventListener('click', function(event) {
 });
 
 ```
-
+///helllo
 
 > In this example, instead of adding a click event handler to each list item, we assign it to the taskList container. When the user clicks on a list item, the event will be captured by the container, and then using event.target we check which item exactly was clicked. We can then respond appropriately by adding or removing the completed class to mark the task as completed. This makes the code more efficient and easier to maintain, especially for dynamically generated elements.
 
