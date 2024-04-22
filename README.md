@@ -20,7 +20,7 @@
 </ul>
 
 ```
-//asdasds
+
 > You can then use JavaScript to assign the click event handler to the `taskList` container and then delegate the event:
 
 ``` bash
@@ -35,7 +35,7 @@ taskList.addEventListener('click', function(event) {
 });
 
 ```
-///helllo
+
 
 > In this example, instead of adding a click event handler to each list item, we assign it to the taskList container. When the user clicks on a list item, the event will be captured by the container, and then using event.target we check which item exactly was clicked. We can then respond appropriately by adding or removing the completed class to mark the task as completed. This makes the code more efficient and easier to maintain, especially for dynamically generated elements.
 
@@ -1285,3 +1285,84 @@ console.log('End');
 
 > * `var` Deklaruje właściwość na obiekcie globalnym (window w przeglądarkach).
 > * `let` i `const` Nie tworzą właściwości na obiekcie globalnym, gdy są deklarowane globalnie.
+
+## ➡️ What are the differences between ES6 class and ES5 function constructors?
+
+> <b> Syntax </b>
+> * ES6 Classes - Use the `class` keyword to define a class.
+> * ES5 Function Builders - Defines constructor functions using regular functions.
+
+> <b> Prototype inheritance </b>
+> * ES6 Classes - Use the Extends keyword to implement inheritance between classes.
+> * ES5 Function Builders - Use function prototypes to make the device inheritable.
+> * `extend` - The Extends keyword is used in JavaScript to create inheritance between classes. An inherited class (also called a child class or subclass) can inherit behavior (methods) and properties (fields) from another class (called a parent class or superclass). When a class inherits another class using extends, it inherits on all methods and properties from the parent class. To access the constructor of the parent class in the constructor of the inheriting class, use the super() keyword. This is necessary because the constructor of the parent class can initialize fields that are later inherited by the inherited class.
+
+### Jakie są różnice między konstruktorami funkcji klasy ES6 i ES5?
+
+> <b> Składnia </b> 
+> * Klasy ES6 - Używają słowa kluczowego `class` do definiowania klasy.
+> * Konstruktory funkcji ES5 - Definiują funkcje konstruktora za pomocą zwykłych funkcji.
+
+```bash
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+  }
+}
+
+const person1 = new Person('John', 30);
+person1.sayHello(); // Output: Hello, my name is John and I'm 30 years old.
+
+```
+
+```bash
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.sayHello = function() {
+  console.log('Hello, my name is ' + this.name + ' and I\'m ' + this.age + ' years old.');
+};
+
+var person2 = new Person('Alice', 25);
+person2.sayHello(); // Output: Hello, my name is Alice and I'm 25 years old.
+
+```
+
+> <b> Dziedziczenie prototypowe </b> 
+> * Klasy ES6 - Używają słowa kluczowego extends do implementowania dziedziczenia między klasami.
+> * Konstruktory funkcji ES5 - Używają właściwości prototype, aby ręcznie ustawić dziedziczenie.
+> * `extend` - Słowo kluczowe extends jest używane w JavaScript do tworzenia dziedziczenia między klasami. Klasa dziedzicząca (nazywana również klasą potomną lub podklasą) może dziedziczyć zachowanie (metody) i właściwości (pola) od innej klasy (nazywanej klasą nadrzędną lub nadklasą). Kiedy klasa dziedzicząca rozszerza inną klasę za pomocą extends, dziedziczy ona wszystkie metody i właściwości z klasy nadrzędnej. W celu dostępu do konstruktora klasy nadrzędnej w konstruktorze klasy dziedziczącej, używamy słowa kluczowego super(). Jest to konieczne, ponieważ konstruktor klasy nadrzędnej może inicjować pola, które są później wykorzystywane przez klasę dziedziczącą.
+
+```bash
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Wywołanie konstruktora nadklasy
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog('Buddy', 'Labrador');
+dog.speak(); // Output: Buddy barks.
+
+```
