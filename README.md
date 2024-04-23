@@ -1339,7 +1339,7 @@ person2.sayHello(); // Output: Hello, my name is Alice and I'm 25 years old.
 > * Klasy ES6 - Używają słowa kluczowego extends do implementowania dziedziczenia między klasami.
 > * Konstruktory funkcji ES5 - Używają właściwości prototype, aby ręcznie ustawić dziedziczenie.
 > * `extend` - Słowo kluczowe extends jest używane w JavaScript do tworzenia dziedziczenia między klasami. Klasa dziedzicząca (nazywana również klasą potomną lub podklasą) może dziedziczyć zachowanie (metody) i właściwości (pola) od innej klasy (nazywanej klasą nadrzędną lub nadklasą). Kiedy klasa dziedzicząca rozszerza inną klasę za pomocą extends, dziedziczy ona wszystkie metody i właściwości z klasy nadrzędnej. W celu dostępu do konstruktora klasy nadrzędnej w konstruktorze klasy dziedziczącej, używamy słowa kluczowego super(). Jest to konieczne, ponieważ konstruktor klasy nadrzędnej może inicjować pola, które są później wykorzystywane przez klasę dziedziczącą.
-//adasdas
+
 ```bash
 class Animal {
   constructor(name) {
@@ -1364,5 +1364,46 @@ class Dog extends Animal {
 
 const dog = new Dog('Buddy', 'Labrador');
 dog.speak(); // Output: Buddy barks.
+
+```
+## ➡️ Can you offer a use case for the new arrow `=>` function syntax? How does this new syntax differ from other functions?
+
+> Arrow functions `=>` allow you to preserve the lexical context of `this`, which is useful when working with nested functions or callbacks. They do not have their own arguments object, cannot be used as `new` constructors, and do not have the `super` keyword.
+
+```bash
+const numbers = [1, 2, 3, 4, 5];
+
+// Regular function
+const square = numbers.map(function(x) {
+   return x * x;
+});
+
+console.log(square); // Output: [1, 4, 9, 16, 25]
+
+// Arrow function
+const squareArrow = numbers.map(x => x * x);
+
+console.log(squareArrow); // Output: [1, 4, 9, 16, 25]
+
+```
+
+### Czy możesz zaproponować przypadek użycia nowej składni funkcji strzałka `=>`? Czym ta nowa składnia różni się od innych funkcji?
+
+> Funkcje strzałkowe `=>` pozwalają na zachowanie leksykalnego kontekstu `this`, co jest przydatne w przypadku pracy z zagnieżdżonymi funkcjami lub wywołaniami zwrotnymi. Nie posiadają własnego obiektu arguments, nie mogą być używane jako konstruktory `new`, ani nie posiadają słowa kluczowego `super`.
+
+```bash
+const numbers = [1, 2, 3, 4, 5];
+
+// Zwykła funkcja
+const square = numbers.map(function(x) {
+  return x * x;
+});
+
+console.log(square); // Output: [1, 4, 9, 16, 25]
+
+// Funkcja strzałkowa
+const squareArrow = numbers.map(x => x * x);
+
+console.log(squareArrow); // Output: [1, 4, 9, 16, 25]
 
 ```
