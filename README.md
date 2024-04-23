@@ -1407,3 +1407,69 @@ const squareArrow = numbers.map(x => x * x);
 console.log(squareArrow); // Output: [1, 4, 9, 16, 25]
 
 ```
+
+## ➡️ What advantage is there for using the arrow syntax for a method in a constructor?
+
+> In the first example, using regular function syntax, this inside sayHello() loses its context when assigned to sayHello. When sayHello is called, this no longer refers to the person object, which causes a TypeError.
+
+> However, in the second example, using arrow function syntax, this is lexically bound to the Person instance, ensuring that it always refers to the correct object, no matter how the method is called or referenced. Therefore, the method works correctly even when it is assigned to a variable and called separately. This is especially convenient when defining methods in constructors, which reduces potential errors and improves code readability.
+
+```bash
+// Using regular function syntax
+function Person(name) {
+   this.name = name;
+   this.sayHello = function() {
+     console.log('Hi, my name is ' + this.name);
+   };
+}
+
+const person = new Person('Alice');
+const sayHello = person.sayHello;
+sayHello(); // Result: TypeError: Could not read property 'name' undefined
+
+// Using arrow function syntax
+function Person(name) {
+   this.name = name;
+   this.sayHello = () => {
+     console.log('Hi, my name is ' + this.name);
+   };
+}
+
+const person = new Person('Bartek');
+const sayHello = person.sayHello;
+sayHello(); // Result: Hello, my name is Bartek
+
+```
+
+### Jaka jest korzyść ze stosowania składni strzałek dla metody w konstruktorze?
+
+> W pierwszym przykładzie, używając składni funkcji regularnej, this wewnątrz sayHello() traci swój kontekst, gdy jest przypisany do sayHello. Gdy jest wywołany sayHello, this nie odnosi się już do obiektu person, co powoduje TypeError.
+
+> Jednakże, w drugim przykładzie, korzystając ze składni funkcji strzałkowej, this jest leksykalnie związane z instancją Person, co zapewnia, że zawsze odnosi się do poprawnego obiektu, bez względu na to, jak metoda jest wywoływana lub odwoływana. Dlatego metoda działa poprawnie nawet wtedy, gdy jest przypisana do zmiennej i wywołana osobno. Jest to szczególnie wygodne w przypadku definiowania metod w konstruktorach, co redukuje potencjalne błędy i poprawia czytelność kodu.
+
+```bash
+// Za pomocą składni funkcji regularnej
+function Person(name) {
+  this.name = name;
+  this.sayHello = function() {
+    console.log('Cześć, nazywam się ' + this.name);
+  };
+}
+
+const person = new Person('Alicja');
+const sayHello = person.sayHello;
+sayHello(); // Wynik: TypeError: Nie można odczytać właściwości „name” undefined
+
+// Za pomocą składni funkcji strzałkowej
+function Person(name) {
+  this.name = name;
+  this.sayHello = () => {
+    console.log('Cześć, nazywam się ' + this.name);
+  };
+}
+
+const person = new Person('Bartek');
+const sayHello = person.sayHello;
+sayHello(); // Wynik: Cześć, nazywam się Bartek
+
+```
