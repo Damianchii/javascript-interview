@@ -1339,7 +1339,7 @@ person2.sayHello(); // Output: Hello, my name is Alice and I'm 25 years old.
 > * Klasy ES6 - Używają słowa kluczowego extends do implementowania dziedziczenia między klasami.
 > * Konstruktory funkcji ES5 - Używają właściwości prototype, aby ręcznie ustawić dziedziczenie.
 > * `extend` - Słowo kluczowe extends jest używane w JavaScript do tworzenia dziedziczenia między klasami. Klasa dziedzicząca (nazywana również klasą potomną lub podklasą) może dziedziczyć zachowanie (metody) i właściwości (pola) od innej klasy (nazywanej klasą nadrzędną lub nadklasą). Kiedy klasa dziedzicząca rozszerza inną klasę za pomocą extends, dziedziczy ona wszystkie metody i właściwości z klasy nadrzędnej. W celu dostępu do konstruktora klasy nadrzędnej w konstruktorze klasy dziedziczącej, używamy słowa kluczowego super(). Jest to konieczne, ponieważ konstruktor klasy nadrzędnej może inicjować pola, które są później wykorzystywane przez klasę dziedziczącą.
-
+//adasdas
 ```bash
 class Animal {
   constructor(name) {
