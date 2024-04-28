@@ -7,11 +7,11 @@
 </p>
 
 ## ➡️ Explain event delegation 
-//heello
+
 > Event delegation in JavaScript is a programming technique that assigns event handlers to parent elements rather than to specific child elements. When an event occurs on a child element, the browser checks whether an event handler has been defined for that element. If not, the browser checks all parents one by one to find the event handler.
 
 > Suppose we have a list of tasks to be performed (todo list) and new tasks are added dynamically by the user. We want to allow the user to mark a task as completed by clicking on it. Instead of assigning event handlers to each new element, we can use event delegation.
-asdadassd
+
 ``` bash
 <ul id="taskList">
   <li>Dish washes</li>
@@ -19,8 +19,8 @@ asdadassd
   <li>Tidy room</li>
 </ul>
 
-```asdasd
-asdasdasd
+```
+
 > You can then use JavaScript to assign the click event handler to the `taskList` container and then delegate the event:
 
 ``` bash
@@ -1471,5 +1471,135 @@ function Person(name) {
 const person = new Person('Bartek');
 const sayHello = person.sayHello;
 sayHello(); // Wynik: Cześć, nazywam się Bartek
+
+```
+
+## ➡️ What is the definition of a higher-order function?
+
+> A higher-order function is a function that takes another function as an argument or returns a function as a result, or both. In other words, it treats functions as first-class citizens, allowing them to be manipulated and passed around like any other value.
+
+> > In this example, the `operateOnArray` function is a higher-order function that takes another operation function as an argument. It then iterates through the `array` and applies the operation function to each element of the array, and stores the results in a new `result` array. Finally, it returns an array with the transformed values. In this case, the `double` function is passed as an `operation` function and is used to double each number in the input array.
+
+```bash
+// Higher order function
+function operateOnArray(array, operation) {
+   let result = [];
+   for (let element of array) {
+     result.push(operation(element));
+   }
+   return result;
+}
+
+// The function we pass as an argument
+function double(x) {
+   return x * 2;
+}
+
+// Input array
+const numbers = [1, 2, 3, 4, 5];
+
+// Call a higher order function with the double function as an argument
+const doubledNumbers = operateOnArray(numbers, double);
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+```
+
+### Jaka jest definicja funkcji wyższego rzędu?
+
+> Funkcja wyższego rzędu to funkcja, która przyjmuje inną funkcję jako argument lub zwraca funkcję jako wynik, lub oba te przypadki. Innymi słowy, traktuje funkcje jako obiekty pierwszej klasy, pozwalając na manipulowanie nimi i przekazywanie ich jak każdej innej wartości.
+
+> W tym przykładzie funkcja `operateOnArray` jest funkcją wyższego rzędu, która przyjmuje inną funkcję operation jako argument. Następnie iteruje po tablicy `array` i stosuje funkcję operation do każdego elementu tablicy, a wyniki zapisuje w nowej tablicy `result`. W końcu zwraca tablicę z przekształconymi wartościami. W tym przypadku funkcja `double` jest przekazana jako funkcja `operation` i jest używana do podwajania każdej liczby w tablicy wejściowej.
+
+```bash
+// Funkcja wyższego rzędu
+function operateOnArray(array, operation) {
+  let result = [];
+  for (let element of array) {
+    result.push(operation(element));
+  }
+  return result;
+}
+
+// Funkcja, którą przekazujemy jako argument
+function double(x) {
+  return x * 2;
+}
+
+// Tablica wejściowa
+const numbers = [1, 2, 3, 4, 5];
+
+// Wywołanie funkcji wyższego rzędu z funkcją double jako argumentem
+const doubledNumbers = operateOnArray(numbers, double);
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+```
+
+## ➡️ Can you give an example for destructuring an object or an array?
+
+> In the first example, the object person is destructured into individual variables name, age, and country. In the second example, the array numbers is destructured into individual variables first, second, and the rest of the elements are gathered into the array rest. Destructuring makes it easier to extract values from objects and arrays and assign them to variables in a more concise way.
+
+```bash
+// Object to be destructured
+const person = {
+  name: 'Alice',
+  age: 30,
+  country: 'USA'
+};
+
+// Destructuring the object
+const { name, age, country } = person;
+
+console.log(name);     // Output: Alice
+console.log(age);      // Output: 30
+console.log(country);  // Output: USA
+
+```
+
+```bash
+// Array to be destructured
+const numbers = [1, 2, 3, 4, 5];
+
+// Destructuring the array
+const [first, second, ...rest] = numbers;
+
+console.log(first);   // Output: 1
+console.log(second);  // Output: 2
+console.log(rest);    // Output: [3, 4, 5]
+
+```
+
+### Czy możesz podać przykład destrukturyzacji obiektu lub tablicy?
+
+> W pierwszym przykładzie obiekt person jest destrukturyzowany na indywidualne zmienne `name`, `age` i `country`. W drugim przykładzie tablica `numbers` jest destrukturyzowana na indywidualne zmienne `first`, `second`, a pozostałe elementy są zbierane do tablicy `rest`. Destrukturyzacja ułatwia ekstrakcję wartości z obiektów i tablic oraz przypisanie ich do zmiennych w bardziej zwięzły sposób.
+
+```bash
+// Obiekt poddany destrukturyzacji
+const person = {
+  name: 'Alicja',
+  age: 30,
+  country: 'USA'
+};
+
+// Destrukturyzacja obiektu
+const { name, age, country } = person;
+
+console.log(name);     // Wynik: Alicja
+console.log(age);      // Wynik: 30
+console.log(country);  // Wynik: USA
+
+```
+
+```bash
+// Tablica poddana destrukturyzacji
+const numbers = [1, 2, 3, 4, 5];
+
+// Destrukturyzacja tablicy
+const [first, second, ...rest] = numbers;
+
+console.log(first);   // Wynik: 1
+console.log(second);  // Wynik: 2
+console.log(rest);    // Wynik: [3, 4, 5]
 
 ```
