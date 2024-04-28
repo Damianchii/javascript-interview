@@ -19,7 +19,7 @@ asdadassd
   <li>Tidy room</li>
 </ul>
 
-```
+```asdasd
 asdasdasd
 > You can then use JavaScript to assign the click event handler to the `taskList` container and then delegate the event:
 
