@@ -1635,3 +1635,73 @@ const message = `Cześć, nazywam się ${name} i mam ${age} lat.`;
 console.log(message); // Wynik: Cześć, nazywam się Alicja i mam 30 lat.
 
 ```
+
+## ➡️ Can you give an example of a curry function and why this syntax offers an advantage?
+
+> In this example, the curry function takes the fn function as an argument and returns a currified version of the function. A currified function takes arguments one at a time, returning a new function with each argument until all required arguments are provided. When all arguments are provided, the original function is called and the result is returned.
+
+> This syntax offers the advantage of allowing partial argument supply, making the function more flexible and reusable. It allows you to create new functions by providing a subset of the arguments in advance, which can be useful in scenarios where you want to repeatedly use a function with some fixed arguments. Additionally, currification promotes feature composition and helps create more compositional and modular code.
+
+```bash
+// Curry function
+function curry(fn) {
+   return function curried(...args) {
+     if (args.length >= fn.length) {
+       return fn(...args);
+     } else {
+       return function(...moreArgs) {
+         return curried(...args, ...moreArgs);
+       };
+     }
+   };
+}
+
+// Example function to be currified
+function add(a, b, c) {
+   return a + b + c;
+}
+
+// Currified version of the add function
+const curriedAdd = curry(add);
+
+console.log(curriedAdd(1)(2)(3)); // Score: 6
+console.log(curriedAdd(1, 2)(3)); // Score: 6
+console.log(curriedAdd(1)(2, 3)); // Score: 6
+console.log(curriedAdd(1, 2, 3)); // Score: 6
+
+```
+
+### Czy możesz podać przykład funkcji curry i dlaczego ta składnia oferuje przewagę?
+
+> W tym przykładzie funkcja curry przyjmuje funkcję fn jako argument i zwraca zcurryfikowaną wersję tej funkcji. Funkcja zcurryfikowana przyjmuje argumenty po jednym, zwracając nową funkcję z każdym argumentem, aż wszystkie wymagane argumenty zostaną dostarczone. Gdy wszystkie argumenty są dostarczone, oryginalna funkcja jest wywoływana, a wynik zostaje zwrócony.
+
+> Ta składnia oferuje przewagę, ponieważ pozwala na częściowe dostarczanie argumentów, sprawiając, że funkcja staje się bardziej elastyczna i wielokrotnego użytku. Umożliwia tworzenie nowych funkcji, dostarczając podzbioru argumentów z góry, co może być przydatne w scenariuszach, gdzie chcemy wielokrotnie użyć funkcji z pewnymi ustalonymi argumentami. Dodatkowo, zcurryfikowanie promuje kompozycję funkcji i pomaga w tworzeniu bardziej kompozycyjnego i modularnego kodu.
+
+```bash
+// Funkcja curry
+function curry(fn) {
+  return function curried(...args) {
+    if (args.length >= fn.length) {
+      return fn(...args);
+    } else {
+      return function(...moreArgs) {
+        return curried(...args, ...moreArgs);
+      };
+    }
+  };
+}
+
+// Przykładowa funkcja do zcurryfikowania
+function add(a, b, c) {
+  return a + b + c;
+}
+
+// Zcurryfikowana wersja funkcji add
+const curriedAdd = curry(add);
+
+console.log(curriedAdd(1)(2)(3)); // Wynik: 6
+console.log(curriedAdd(1, 2)(3)); // Wynik: 6
+console.log(curriedAdd(1)(2, 3)); // Wynik: 6
+console.log(curriedAdd(1, 2, 3)); // Wynik: 6
+
+```
