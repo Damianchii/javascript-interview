@@ -1705,3 +1705,51 @@ console.log(curriedAdd(1)(2, 3)); // Wynik: 6
 console.log(curriedAdd(1, 2, 3)); // Wynik: 6
 
 ```
+
+## ➡️ What are the benefits of using spread syntax and how is it different from rest syntax?
+
+> Spread Syntax
+
+> * Array/Object Manipulation: The spread syntax allows you to expand arrays and objects into single elements or properties. This is useful for tasks such as concatenating arrays, copying arrays/objects, and passing multiple arguments to functions.
+
+> * Array/Object Cloning: Provides a concise way to clone arrays and objects without mutating the original data.
+
+> * Function Calls: Can be used to pass multiple arguments to a function where multiple parameters are expected.
+
+>Rest Syntax:
+
+> * Parameter collection: The rest syntax allows you to collect the remaining arguments in a function into an array. This is especially useful when you have a variable number of arguments in your function definition.
+
+> * Destructuring: The rest syntax can be used in destructuring to capture the remaining elements into an array.
+
+> * Flexible Function Signatures: Provides flexibility in function signatures by allowing functions to accept any number of arguments.
+
+> Difference
+
+> * Syntax Spread: Used to expand an iterable (such as an array or string) into single elements. Typically used in function calls, array literals, and object literals.
+
+> * Syntax Rest: Used to collect multiple elements into one array. It is mainly used in function parameters and destructuring assignments.
+
+### Jakie są korzyści ze stosowania składni rozproszonej i czym różni się ona od składni reszty?
+
+> Spread Syntax
+
+> * Manipulacja tablicami/obiektami: Składnia spread pozwala na rozwijanie tablic i obiektów na pojedyncze elementy lub właściwości. Jest to przydatne do zadań takich jak łączenie tablic, kopiowanie tablic/obiektów i przekazywanie wielu argumentów do funkcji.
+
+> * Klonowanie tablic/obiektów: Zapewnia zwięzły sposób klonowania tablic i obiektów bez mutowania oryginalnych danych.
+
+> * Wywołania funkcji: Może być używany do przekazywania wielu argumentów do funkcji, gdzie oczekuje się wielu parametrów.
+
+> Rest Syntax:
+
+> * Gromadzenie parametrów: Składnia rest pozwala na zbieranie pozostałych argumentów w funkcji do tablicy. Jest to szczególnie przydatne, gdy masz zmienną liczbę argumentów w definicji funkcji.
+
+> * Destrukturyzacja: Składnia rest może być używana w destrukturyzacji do przechwytywania pozostałych elementów do tablicy.
+
+> * Elastyczne sygnatury funkcji: Zapewnia elastyczność w sygnaturach funkcji, pozwalając funkcjom akceptować dowolną liczbę argumentów.
+
+> Różnica
+
+> * Składnia Spread: Służy do rozwijania iterowalnego (takiego jak tablica lub łańcuch) na pojedyncze elementy. Zazwyczaj używana jest w wywołaniach funkcji, literałach tablic i literałach obiektów.
+
+> * Składnia Rest: Służy do zbierania wielu elementów do jednej tablicy. Jest głównie używana w parametrach funkcji i destrukturyzacji przypisań.
