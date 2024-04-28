@@ -1603,3 +1603,35 @@ console.log(second);  // Wynik: 2
 console.log(rest);    // Wynik: [3, 4, 5]
 
 ```
+
+## ➡️ Can you give an example of generating a string with ES6 Template Literals?
+
+> In this example, the string message is generated using backticks (`) to define the string, and placeholders ${} to insert variables directly into the string. This makes the string interpolation more concise and readable compared to traditional string concatenation methods.
+
+```bash
+// Example variables
+const name = 'Alice';
+const age = 30;
+
+// Generating a string using Template Literals
+const message = `Hello, my name is ${name} and I am ${age} years old.`;
+
+console.log(message); // Output: Hello, my name is Alice and I am 30 years old.
+
+```
+
+### Czy możesz podać przykład generowania ciągu znaków za pomocą literałów szablonu ES6?
+
+> W tym przykładzie ciąg znaków message jest generowany za pomocą delty do zdefiniowania ciągu znaków oraz miejsc podstawiania `${}` , aby wstawić zmienne bezpośrednio do ciągu znaków. Dzięki temu interpolacja ciągów znaków jest bardziej zwięzła i czytelna w porównaniu z tradycyjnymi metodami konkatenacji ciągów znaków.
+
+```bash
+// Przykładowe zmienne
+const name = 'Alicja';
+const age = 30;
+
+// Generowanie ciągu znaków za pomocą szablonów literałów
+const message = `Cześć, nazywam się ${name} i mam ${age} lat.`;
+
+console.log(message); // Wynik: Cześć, nazywam się Alicja i mam 30 lat.
+
+```
