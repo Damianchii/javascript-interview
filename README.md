@@ -2168,7 +2168,7 @@ shapes.forEach(shape => shape.draw());
 
 > By applying these OOP principles, you can write cleaner, more modular, and maintainable JavaScript code that is easier to understand and scale.
 
-### 
+### Omów, w jaki sposób możesz wykorzystać zasady programowania obiektowego podczas kodowania za pomocą JavaScript.
 
 
 > Zasady programowania obiektowego (OOP) można skutecznie zastosować podczas kodowania za pomocą JavaScript w celu stworzenia kodu modułowego, wielokrotnego użytku i łatwego w utrzymaniu. Oto jak możesz wykorzystać zasady OOP w JavaScript:
@@ -2277,3 +2277,5 @@ shapes.forEach(shape => shape.draw());
 ```
 
 > Stosując te zasady OOP, możesz napisać czystszy, bardziej modułowy i łatwiejszy w utrzymaniu kod JavaScript, który będzie łatwiejszy do zrozumienia i skalowania.
+
+## ➡️ 
