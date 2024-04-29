@@ -1803,4 +1803,93 @@ console.log(sum(1, 2, 3, 4, 5)); // Wynik: 15
 
 ```
 
-## ➡️ Can you give an example of generating a string with ES6 Template Literals?
+## ➡️ How can you share code between files?
+
+> * Module Import/Export (ES6):
+
+```bash
+// In the module.js file
+export function greet(name) {
+   return `Hello, ${name}!`;
+}
+
+// In the file using.js
+import { greet } from './module';
+console.log(greet('World')); // Result: Hello, World!
+
+```
+
+> * CommonJS modules (Node.js):
+
+```bash
+// In the module.js file
+function greet(name) {
+   return `Hello, ${name}!`;
+}
+module.exports = greet;
+
+// In the file using.js
+const greet = require('./module');
+console.log(greet('World')); // Result: Hello, World!
+```
+
+> * Global variables:
+
+```bash
+// In the variables.js file
+window.myVariable = 42;
+
+// In the file using.js
+console.log(window.myVariable); // Result: 42
+
+```
+
+### Jak udostępnić kod pomiędzy plikami?
+
+> * Import/Export modułów (ES6):
+
+```bash
+// W pliku modułu.js
+export function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// W pliku korzystającym.js
+import { greet } from './moduł';
+console.log(greet('World')); // Wynik: Hello, World!
+
+```
+
+> * Moduły CommonJS (Node.js):
+
+```bash
+// W pliku moduł.js
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+module.exports = greet;
+
+// W pliku korzystającym.js
+const greet = require('./moduł');
+console.log(greet('World')); // Wynik: Hello, World!
+```
+
+> * Zmienne globalne:
+
+```bash
+// W pliku zmiennych.js
+window.myVariable = 42;
+
+// W pliku korzystającym.js
+console.log(window.myVariable); // Wynik: 42
+
+```
+## ➡️ Why you might want to create static class members?
+
+
+
+### Dlaczego warto tworzyć statyczne elementy klasy?
+
+
+
+
