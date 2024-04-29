@@ -1886,10 +1886,52 @@ console.log(window.myVariable); // Wynik: 42
 ```
 ## ➡️ Why you might want to create static class members?
 
+> * Performance: Static elements can improve performance by reducing memory usage and avoiding unnecessary data duplication. Because they are shared between all instances, they only need to be initialized once and can be accessed without having to create a new instance of the class.
 
+> * Global Access: Static elements can be accessed directly from the class without the need to create an instance. This makes it easier to provide global access to specific functionality or data related to the class as a whole.
+
+```bash
+class MathUtils {
+   // Static method to calculate the sum of two numbers
+   static add(a, b) {
+     return a + b;
+   }
+
+   // Static property with a constant value
+   static PI = 3.14159;
+}
+
+// Calling a static method
+console.log(MathUtils.add(2, 3)); // Score: 5
+
+//Access the static property
+console.log(MathUtils.PI); // Result: 3.14159
+
+```
 
 ### Dlaczego warto tworzyć statyczne elementy klasy?
 
+> * Wydajność: Statyczne elementy mogą poprawić wydajność, zmniejszając zużycie pamięci i unikając niepotrzebnego duplikowania danych. Ponieważ są one współdzielone między wszystkimi instancjami, potrzebują zostać zainicjalizowane tylko raz i mogą być dostępne bez konieczności tworzenia nowej instancji klasy.
 
+> * Globalny Dostęp: Statyczne elementy mogą być dostępne bezpośrednio z klasy bez konieczności tworzenia instancji. Ułatwia to zapewnienie globalnego dostępu do określonej funkcjonalności lub danych związanych z klasą jako całością.
+
+```bash
+class MathUtils {
+  // Statyczna metoda do obliczania sumy dwóch liczb
+  static add(a, b) {
+    return a + b;
+  }
+
+  // Statyczna właściwość z wartością stałą
+  static PI = 3.14159;
+}
+
+// Wywołanie statycznej metody
+console.log(MathUtils.add(2, 3)); // Wynik: 5
+
+// Dostęp do statycznej właściwości
+console.log(MathUtils.PI); // Wynik: 3.14159
+
+```
 
 
