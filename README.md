@@ -1934,4 +1934,43 @@ console.log(MathUtils.PI); // Wynik: 3.14159
 
 ```
 
+## ➡️ What is the difference between while and do-while loops in JavaScript?
 
+> In the while loop, the condition i < 5 is evaluated first, so if i is initially not less than 5, the loop body is never executed. In contrast, in the do-while loop, the loop body is executed at least once before checking the condition, ensuring that the loop body executes at least once even if the condition is initially false.
+
+```bash
+// while loop
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+// do-while loop
+let j = 0;
+do {
+  console.log(j);
+  j++;
+} while (j < 5);
+
+```
+### Jaka jest różnica między pętlami while i do-while w JavaScript?
+
+> W pętli while warunek i < 5 jest najpierw oceniany, więc jeśli i początkowo nie jest mniejsze niż 5, ciało pętli nigdy nie zostanie wykonane. W przeciwieństwie do tego, w pętli do-while ciało pętli jest wykonywane co najmniej raz przed sprawdzeniem warunku, co zapewnia wykonanie ciała pętli przynajmniej raz, nawet jeśli warunek początkowo jest fałszywy.
+
+```bash
+// pętla while
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+// pętla do-while
+let j = 0;
+do {
+  console.log(j);
+  j++;
+} while (j < 5);
+
+```
