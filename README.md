@@ -1716,6 +1716,18 @@ console.log(curriedAdd(1, 2, 3)); // Wynik: 6
 
 > * Function Calls: Can be used to pass multiple arguments to a function where multiple parameters are expected.
 
+> Example of using the spread syntax:
+
+```bash
+// Sample array
+const numbers = [1, 2, 3];
+
+// Create a copy of the array using the spread syntax
+const copyNumbers = [...numbers];
+
+console.log(copyNumbers); // Result: [1, 2, 3]
+```
+
 >Rest Syntax:
 
 > * Parameter collection: The rest syntax allows you to collect the remaining arguments in a function into an array. This is especially useful when you have a variable number of arguments in your function definition.
@@ -1730,6 +1742,18 @@ console.log(curriedAdd(1, 2, 3)); // Wynik: 6
 
 > * Syntax Rest: Used to collect multiple elements into one array. It is mainly used in function parameters and destructuring assignments.
 
+> Example of using the rest syntax in a function:
+
+```bash
+// A function that sums any number of arguments
+function sum(...args) {
+   return args.reduce((total, current) => total + current, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Result: 15
+
+```
+
 ### Jakie są korzyści ze stosowania składni rozproszonej i czym różni się ona od składni reszty?
 
 > Spread Syntax
@@ -1739,6 +1763,19 @@ console.log(curriedAdd(1, 2, 3)); // Wynik: 6
 > * Klonowanie tablic/obiektów: Zapewnia zwięzły sposób klonowania tablic i obiektów bez mutowania oryginalnych danych.
 
 > * Wywołania funkcji: Może być używany do przekazywania wielu argumentów do funkcji, gdzie oczekuje się wielu parametrów.
+
+> Przykład użycia składni spread:
+
+```bash
+// Przykładowa tablica
+const numbers = [1, 2, 3];
+
+// Tworzenie kopii tablicy za pomocą składni spread
+const copyNumbers = [...numbers];
+
+console.log(copyNumbers); // Wynik: [1, 2, 3]
+
+```
 
 > Rest Syntax:
 
@@ -1753,3 +1790,17 @@ console.log(curriedAdd(1, 2, 3)); // Wynik: 6
 > * Składnia Spread: Służy do rozwijania iterowalnego (takiego jak tablica lub łańcuch) na pojedyncze elementy. Zazwyczaj używana jest w wywołaniach funkcji, literałach tablic i literałach obiektów.
 
 > * Składnia Rest: Służy do zbierania wielu elementów do jednej tablicy. Jest głównie używana w parametrach funkcji i destrukturyzacji przypisań.
+
+> Przykład użycia składni rest w funkcji:
+
+```bash
+// Funkcja sumująca dowolną liczbę argumentów
+function sum(...args) {
+  return args.reduce((total, current) => total + current, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Wynik: 15
+
+```
+
+## ➡️ Can you give an example of generating a string with ES6 Template Literals?
