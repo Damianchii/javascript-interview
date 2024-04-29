@@ -2055,3 +2055,225 @@ fetchData()
 
 > W tym przykładzie funkcja fetchData zwraca obietnicę, która zostanie rozwiązana danymi pobranymi z serwera po symulowanym opóźnieniu. Metoda `.then()` jest używana do obsługi pomyślnego zakończenia obietnicy, podczas gdy metoda `.catch()` służy do obsługi błędów, które wystąpią podczas operacji asynchronicznej.
 
+## ➡️ Discuss how you might use Object Oriented Programming principles when coding with JavaScript.
+
+> Object-oriented programming (OOP) principles can be effectively applied when coding with JavaScript to create modular, reusable, and maintainable code. Here's how you might use OOP principles in JavaScript:
+
+> * Encapsulation: Use objects to encapsulate related data and behavior into a single unit. This helps in organizing code and preventing unintended interference with data.
+javascript
+
+```bash
+// Encapsulation example
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+  
+  drive() {
+    console.log(`Driving ${this.brand} ${this.model}`);
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla');
+myCar.drive(); // Output: Driving Toyota Corolla
+```
+
+> * Abstraction: Hide the complex implementation details of an object and only expose the necessary interfaces. This allows for simpler usage and reduces complexity.
+javascript
+
+```bash
+// Abstraction example
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+  
+  draw() {
+    throw new Error('Method draw() must be implemented');
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius, color) {
+    super(color);
+    this.radius = radius;
+  }
+  
+  draw() {
+    console.log(`Drawing a ${this.color} circle with radius ${this.radius}`);
+  }
+}
+
+const myCircle = new Circle(5, 'blue');
+myCircle.draw(); // Output: Drawing a blue circle with radius 5
+```
+
+> * Inheritance: Use inheritance to create a hierarchy of classes where child classes inherit properties and methods from parent classes. This promotes code reuse and makes it easier to maintain and extend code.
+javascript
+
+```bash
+// Inheritance example
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(`${this.name} makes a sound`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  
+  speak() {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const myDog = new Dog('Buddy');
+myDog.speak(); // Output: Buddy barks
+
+```
+
+> * Polymorphism: Use polymorphism to allow objects of different classes to be treated as objects of a common superclass. This promotes flexibility and simplifies code.
+javascript
+
+```bash
+// Polymorphism example
+class Shape {
+  draw() {
+    console.log('Drawing a shape');
+  }
+}
+
+class Circle extends Shape {
+  draw() {
+    console.log('Drawing a circle');
+  }
+}
+
+class Rectangle extends Shape {
+  draw() {
+    console.log('Drawing a rectangle');
+  }
+}
+
+const shapes = [new Circle(), new Rectangle()];
+shapes.forEach(shape => shape.draw());
+```
+
+> By applying these OOP principles, you can write cleaner, more modular, and maintainable JavaScript code that is easier to understand and scale.
+
+### 
+
+
+> Zasady programowania obiektowego (OOP) można skutecznie zastosować podczas kodowania za pomocą JavaScript w celu stworzenia kodu modułowego, wielokrotnego użytku i łatwego w utrzymaniu. Oto jak możesz wykorzystać zasady OOP w JavaScript:
+
+> * Enkapsulacja: Wykorzystuj obiekty do enkapsulacji powiązanych danych i zachowań w jednostkę. Pomaga to w organizacji kodu i zapobiega niezamierzonemu ingerowaniu w dane.
+
+```bash
+// Encapsulation example
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+  
+  drive() {
+    console.log(`Driving ${this.brand} ${this.model}`);
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla');
+myCar.drive(); // Output: Driving Toyota Corolla
+```
+
+> * Abstrakcja: Ukryj złożone szczegóły implementacyjne obiektu i udostępnij tylko niezbędne interfejsy. Umożliwia to prostsze użycie i redukuje złożoność.
+
+```bash
+// Abstraction example
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+  
+  draw() {
+    throw new Error('Method draw() must be implemented');
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius, color) {
+    super(color);
+    this.radius = radius;
+  }
+  
+  draw() {
+    console.log(`Drawing a ${this.color} circle with radius ${this.radius}`);
+  }
+}
+
+const myCircle = new Circle(5, 'blue');
+myCircle.draw(); // Output: Drawing a blue circle with radius 5
+```
+
+> * Dziedziczenie: Wykorzystuj dziedziczenie do tworzenia hierarchii klas, gdzie klasy potomne dziedziczą właściwości i metody po klasach nadrzędnych. Promuje to ponowne wykorzystanie kodu i ułatwia jego utrzymanie i rozbudowę.
+
+```bash
+// Inheritance example
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(`${this.name} makes a sound`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  
+  speak() {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const myDog = new Dog('Buddy');
+myDog.speak(); // Output: Buddy barks
+
+```
+
+> * Polimorfizm: Wykorzystuj polimorfizm, aby obiekty różnych klas mogły być traktowane jako obiekty wspólnego nadklasy. Promuje to elastyczność i upraszcza kod.
+
+```bash
+// Polymorphism example
+class Shape {
+  draw() {
+    console.log('Drawing a shape');
+  }
+}
+
+class Circle extends Shape {
+  draw() {
+    console.log('Drawing a circle');
+  }
+}
+
+class Rectangle extends Shape {
+  draw() {
+    console.log('Drawing a rectangle');
+  }
+}
+
+const shapes = [new Circle(), new Rectangle()];
+shapes.forEach(shape => shape.draw());
+```
+
+> Stosując te zasady OOP, możesz napisać czystszy, bardziej modułowy i łatwiejszy w utrzymaniu kod JavaScript, który będzie łatwiejszy do zrozumienia i skalowania.
