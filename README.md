@@ -1974,3 +1974,84 @@ do {
 } while (j < 5);
 
 ```
+
+## ➡️ What is a promise? Where and how would you use promise?
+
+> `Promise` is an object representing the eventual completion or failure of an asynchronous operation. It is used to support asynchronous operations in JavaScript, such as retrieving data from a server, reading a file, or performing a time-consuming task where the result is not immediately available.
+
+>States of promises
+
+> * Pending: Initial status, neither fulfilled nor rejected.
+
+> * Fulfilled: The operation completed successfully.
+
+> * Rejected: The operation failed with an error.
+
+> Promises provide cleaner and more flexible alternatives to traditional callback-based asynchronous programming. They allow you to chain multiple asynchronous operations, handle errors efficiently, and simplify error handling using the `.catch()` method.
+
+```bash
+const fetchData = () => {
+   return new Promise((resolve, reject) => {
+     setTimeout(() => {
+       const data = 'Data from server';
+       // Simulate a successful download
+       resolve(date);
+      
+       // Simulate an error while downloading
+       // reject('Error while retrieving data');
+     }, 2000);
+   });
+};
+
+fetchData()
+   .then(date => {
+     console.log('Data:', date);
+   })
+   .catch(error => {
+     console.error('Error:', error);
+   });
+
+```
+
+> In this example, the fetchData function returns a promise that will be resolved with data fetched from the server after a simulated delay. The `.then()` method is used to handle the successful completion of the promise, while the `.catch()` method is used to handle errors that will occur during the asynchronous operation.
+
+### Co to jest obietnica? Gdzie i jak użyłbyś obietnicy?
+
+> `Promise` to obiekt reprezentujący eventualną realizację lub niepowodzenie operacji asynchronicznej. Jest używany do obsługi operacji asynchronicznych w JavaScript, takich jak pobieranie danych z serwera, czytanie pliku lub wykonanie zadania czasochłonnego, gdzie wynik nie jest natychmiast dostępny.
+
+> Stany obietnic 
+
+> * Oczekujący: Stan początkowy, ani spełniony, ani odrzucony.
+
+> * Spełniony: Operacja została zakończona pomyślnie.
+
+> * Odrzucony: Operacja zakończyła się niepowodzeniem z błędem.
+
+> Obietnice zapewniają czystsze i bardziej elastyczne alternatywy dla tradycyjnego programowania asynchronicznego opartego na wywołaniach zwrotnych. Pozwalają one na łączenie wielu operacji asynchronicznych, efektywne obsługiwania błędów i upraszczanie obsługi błędów za pomocą metody `.catch()`.
+
+```bash
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Dane z serwera';
+      // Symulacja udanego pobrania
+      resolve(data);
+      
+      // Symulacja błędu podczas pobierania
+      // reject('Błąd podczas pobierania danych');
+    }, 2000);
+  });
+};
+
+fetchData()
+  .then(data => {
+    console.log('Dane:', data);
+  })
+  .catch(error => {
+    console.error('Błąd:', error);
+  });
+
+```
+
+> W tym przykładzie funkcja fetchData zwraca obietnicę, która zostanie rozwiązana danymi pobranymi z serwera po symulowanym opóźnieniu. Metoda `.then()` jest używana do obsługi pomyślnego zakończenia obietnicy, podczas gdy metoda `.catch()` służy do obsługi błędów, które wystąpią podczas operacji asynchronicznej.
+
