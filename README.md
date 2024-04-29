@@ -2343,3 +2343,75 @@ Bieżący cel: outer
 Cel: inner
 
 ```
+
+## ➡️ What is the difference between `event.preventDefault()` and `event.stopPropagation()`?
+
+> The difference between `event.preventDefault()` and `event.stopPropagation()` is their impact on event handling:
+
+> `event.preventDefault()`
+This method is used to prevent the default action of an event.
+Prevents the browser from defaulting on the event, such as submitting a form, navigating to a link, or refreshing a page.
+Does not stop the event from propagating through the DOM hierarchy.
+
+
+> `event.stopPropagation()`
+This method is used to stop the event from propagating through the DOM hierarchy.
+Prevents an event from rising to its parents or catching down to its children after being handled by the current target.
+Does not prevent the default action of the event.
+
+> In summary, `event.preventDefault()` prevents the default event action, while `event.stopPropagation()` stops an event from further propagating through the DOM hierarchy. They are often used together to control both default behavior and event propagation behavior.
+
+```bash
+<a href="#" id="link">Click me</a>
+<div id="container">
+  <button id="button">Button</button>
+</div>
+
+```
+
+```bash
+document.getElementById('link').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents the default action of following the link
+});
+
+document.getElementById('container').addEventListener('click', function(event) {
+  event.stopPropagation(); // Stops the event from propagating further
+});
+
+```
+
+### Jaka jest różnica między `event.preventDefault()` a `event.stopPropagation()`?
+
+
+> Różnica między `event.preventDefault()` a `event.stopPropagation()` polega na ich wpływie na obsługę zdarzeń:
+
+> `event.preventDefault()`
+Ta metoda jest używana do zapobiegania domyślnej akcji związanej z zdarzeniem.
+Uniemożliwia przeglądarce domyślne zachowanie dla zdarzenia, takie jak przesłanie formularza, przejście do linku lub odświeżenie strony.
+Nie zatrzymuje zdarzenia przed propagacją przez hierarchię DOM.
+
+
+> `event.stopPropagation()`
+Ta metoda jest używana do zatrzymania propagacji zdarzenia przez hierarchię DOM.
+Zapobiega zdarzeniu wzbijającemu się do elementów nadrzędnych lub przechwytującemu w dół do elementów podrzędnych po obsłużeniu przez bieżący element docelowy.
+Nie zapobiega domyślnej akcji związanego z zdarzeniem.
+
+> Podsumowując, `event.preventDefault()` zapobiega domyślnej akcji zdarzenia, podczas gdy `event.stopPropagation()` zatrzymuje zdarzenie przed dalszą propagacją przez hierarchię DOM. Często są one używane razem, aby kontrolować zarówno domyślne działanie, jak i zachowanie propagacji zdarzeń.
+
+```bash
+<a href="#" id="link">Kliknij mnie</a>
+<div id="container">
+  <button id="button">Przycisk</button>
+</div>
+
+```
+```bash
+document.getElementById('link').addEventListener('click', function(event) {
+  event.preventDefault(); // Zapobiega domyślnej akcji przejścia do linku
+});
+
+document.getElementById('container').addEventListener('click', function(event) {
+  event.stopPropagation(); // Zatrzymuje zdarzenie przed dalszą propagacją
+});
+
+```
