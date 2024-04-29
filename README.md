@@ -2278,4 +2278,68 @@ shapes.forEach(shape => shape.draw());
 
 > Stosując te zasady OOP, możesz napisać czystszy, bardziej modułowy i łatwiejszy w utrzymaniu kod JavaScript, który będzie łatwiejszy do zrozumienia i skalowania.
 
-## ➡️ 
+## ➡️ What is the difference between `event.target` and `event.currentTarget`?
+
+> The difference between event.target and event.currentTarget is how they behave when propagating events through the DOM:
+
+> * `event.target` Refers to the element on which the event originally occurred (that is, the deepest element where the event started). Always represents the element that caused the event.
+
+> * `event.currentTarget` Refers to the element to which the event handler is currently attached (that is, the element to which the event listener has been assigned). It remains unchanged throughout the event propagation and does not change.
+Here is a simplified explanation:
+
+> If you have nested elements with event listeners (for example a button inside a div), clicking on the inner element (for example the button) will trigger an event on that element, making it an event.target. However, event.currentTarget will remain the same (i.e. the outer element to which the event listener is attached).
+
+> In cases where the event listener is directly attached to a target, both event.target and event.currentTarget will refer to the same element.
+
+```bash
+<div id="outer">
+   <button id="inner">Click me</button>
+</div>
+
+```
+```bash
+document.getElementById('outer').addEventListener('click', function(event) {
+   console.log('Current target:', event.currentTarget.id);
+   console.log('Target:', event.target.id);
+});
+
+```
+
+```bash
+Current target: outer
+Target: inner
+
+```
+
+### Jaka jest różnica między `event.target` a `event.currentTarget`?
+
+> Różnica między event.target a event.currentTarget polega na tym, jak się zachowują podczas propagacji zdarzeń w DOM:
+
+> * `event.target` Odnosi się do elementu, na którym pierwotnie wystąpiło zdarzenie (czyli najgłębszego elementu, gdzie zdarzenie się zaczęło). Zawsze reprezentuje element, który spowodował zdarzenie.
+
+> * `event.currentTarget` Odnosi się do elementu, do którego obecnie jest przyczepiony obsługiwacz zdarzeń (czyli elementu, do którego został przypisany nasłuchiwacz zdarzeń). Pozostaje on niezmieniony przez całą propagację zdarzeń i nie ulega zmianie.
+Oto uproszczone wyjaśnienie:
+
+> Jeśli masz zagnieżdżone elementy z nasłuchiwaczami zdarzeń (na przykład przycisk wewnątrz diva), kliknięcie na wewnętrznym elemencie (na przykład przycisku) spowoduje wywołanie zdarzenia na tym elemencie, co czyni go event.target. Jednak event.currentTarget pozostanie taki sam (czyli zewnętrzny element, do którego przyczepiony jest nasłuchiwacz zdarzeń).
+
+> W przypadkach, gdy nasłuchiwacz zdarzeń jest bezpośrednio przyczepiony do elementu docelowego, zarówno event.target, jak i event.currentTarget będą odnosić się do tego samego elementu.
+
+```bash
+<div id="outer">
+  <button id="inner">Kliknij mnie</button>
+</div>
+
+```
+```bash
+document.getElementById('outer').addEventListener('click', function(event) {
+  console.log('Bieżący cel:', event.currentTarget.id);
+  console.log('Cel:', event.target.id);
+});
+
+```
+
+```bash
+Bieżący cel: outer
+Cel: inner
+
+```
